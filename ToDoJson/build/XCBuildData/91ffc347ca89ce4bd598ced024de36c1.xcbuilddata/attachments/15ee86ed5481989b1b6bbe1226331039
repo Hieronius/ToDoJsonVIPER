@@ -1,0 +1,248 @@
+{
+  "" : {
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoJson-master.dia",
+    "emit-module-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoJson-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoJson-master-emit-module.dia",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoJson-master.swiftdeps"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Helpers/GenericViewController.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GenericViewController.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GenericViewController.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GenericViewController.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GenericViewController.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GenericViewController.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GenericViewController.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GenericViewController.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/GenericViewController~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Helpers/UIColor+CustomColor.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/UIColor+CustomColor.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/UIColor+CustomColor.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/UIColor+CustomColor.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/UIColor+CustomColor.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/UIColor+CustomColor.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/UIColor+CustomColor.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/UIColor+CustomColor.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/UIColor+CustomColor~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Models/ToDo.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDo.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDo.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDo.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDo.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDo.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDo.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDo.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDo~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/Category.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/Category.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/Category.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/Category.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/Category.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/Category.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/Category.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/Category.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/Category~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/MainScreenEntity.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenEntity.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenEntity.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenEntity.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenEntity.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenEntity.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenEntity.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenEntity.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenEntity~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/MainScreenInteractor.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenInteractor.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenInteractor.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenInteractor.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenInteractor.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenInteractor.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenInteractor.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenInteractor.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenInteractor~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/MainScreenPresenter.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenPresenter.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenPresenter.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenPresenter.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenPresenter.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenPresenter.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenPresenter.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenPresenter.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenPresenter~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/MainScreenRouter.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenRouter.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenRouter.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenRouter.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenRouter.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenRouter.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenRouter.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenRouter.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenRouter~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/View/MainScreenView.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenView.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenView.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenView.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenView.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenView.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenView.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenView.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenView~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/View/MainScreenViewController.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/MainScreenViewController~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/View/ToDoCell.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoCell.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoCell.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoCell.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoCell.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoCell.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoCell.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoCell.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoCell~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/TaskScreenModule/TaskScreenEntity.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenEntity.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenEntity.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenEntity.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenEntity.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenEntity.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenEntity.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenEntity.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenEntity~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/TaskScreenModule/TaskScreenInteractor.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenInteractor.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenInteractor.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenInteractor.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenInteractor.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenInteractor.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenInteractor.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenInteractor.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenInteractor~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/TaskScreenModule/TaskScreenPresenter.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/TaskScreenModule/TaskScreenRouter.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenRouter.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenRouter.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenRouter.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenRouter.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenRouter.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenRouter.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenRouter.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenRouter~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/TaskScreenModule/View/TaskScreenView.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenView.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenView.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenView.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenView.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenView.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenView.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenView.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenView~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/TaskScreenModule/View/TaskScreenViewController.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenViewController.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenViewController.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenViewController.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenViewController.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenViewController.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenViewController.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenViewController.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/TaskScreenViewController~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Network/ToDoService.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoService.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoService.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoService.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoService.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoService.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoService.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoService.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoService~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Persistence/PersistentContainer.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/PersistentContainer.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/PersistentContainer.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/PersistentContainer.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/PersistentContainer.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/PersistentContainer.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/PersistentContainer.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/PersistentContainer.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/PersistentContainer~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Persistence/ToDoDataManager.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoDataManager.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoDataManager.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoDataManager.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoDataManager.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoDataManager.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoDataManager.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoDataManager.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoDataManager~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Persistence/ToDoMO+CoreDataClass.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoMO+CoreDataClass.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoMO+CoreDataClass.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoMO+CoreDataClass.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoMO+CoreDataClass.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoMO+CoreDataClass.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoMO+CoreDataClass.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoMO+CoreDataClass.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/ToDoMO+CoreDataClass~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Resources/AppDelegate.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/AppDelegate.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Resources/SceneDelegate.swift" : {
+    "const-values" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/SceneDelegate.swiftconstvalues",
+    "dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/SceneDelegate.d",
+    "diagnostics" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/SceneDelegate.dia",
+    "index-unit-output-path" : "/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/SceneDelegate.o",
+    "llvm-bc" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/SceneDelegate.bc",
+    "object" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/SceneDelegate.o",
+    "swift-dependencies" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/SceneDelegate.swiftdeps",
+    "swiftmodule" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphoneos/ToDoJson.build/Objects-normal/arm64/SceneDelegate~partial.swiftmodule"
+  }
+}

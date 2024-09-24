@@ -1,0 +1,18 @@
+"/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/View/MainScreenViewController.swift":
+  const-values: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.swiftconstvalues"
+  dependencies: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.d"
+  diagnostics: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.dia"
+  object: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.o"
+  swift-dependencies: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenViewController.swiftdeps"
+"/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/MainScreenModule/View/MainScreenView.swift":
+  object: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenView.o"
+  swift-dependencies: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenView.swiftdeps"
+  diagnostics: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenView.dia"
+  dependencies: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenView.d"
+  const-values: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/MainScreenView.swiftconstvalues"
+"/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson/Modules/TaskScreenModule/TaskScreenPresenter.swift":
+  swift-dependencies: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.swiftdeps"
+  object: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.o"
+  const-values: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.swiftconstvalues"
+  dependencies: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.d"
+  diagnostics: "/Users/22031905/Downloads/ToDoJson/ToDoJson/build/ToDoJson.build/Debug-iphonesimulator/ToDoJson.build/Objects-normal/arm64/TaskScreenPresenter.dia"

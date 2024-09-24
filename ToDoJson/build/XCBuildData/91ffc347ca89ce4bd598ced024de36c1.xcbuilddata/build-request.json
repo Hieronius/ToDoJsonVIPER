@@ -1,0 +1,44 @@
+{
+  "buildCommand" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "2b27e4aa1b8c1e091f5f0e8624ccb1d3758e2665baa1ba6e4c48385dc7196777"
+    }
+  ],
+  "containerPath" : "/Users/22031905/Downloads/ToDoJson/ToDoJson/ToDoJson.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/22031905/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/22031905/Library/Developer/Xcode/DerivedData/ToDoJson-dcbmwpoavvjdfqfuuffrhjrzbolf/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/22031905/Library/Developer/Xcode/DerivedData/ToDoJson-dcbmwpoavvjdfqfuuffrhjrzbolf/Index.noindex/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
