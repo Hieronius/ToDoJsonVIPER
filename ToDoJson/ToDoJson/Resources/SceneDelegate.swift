@@ -10,6 +10,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		window = UIWindow(windowScene: windowScene)
 
+		// MARK: Build MainScreen and embed in NavigationVC as RootViewController
+
 		let rootVC = MainScreenRouter.createModule()
 		let naviVC = UINavigationController(rootViewController: rootVC)
 		naviVC.setNavigationBarHidden(true, animated: false)

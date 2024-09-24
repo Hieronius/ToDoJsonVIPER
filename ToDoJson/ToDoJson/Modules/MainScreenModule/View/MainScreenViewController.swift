@@ -7,8 +7,8 @@ final class MainScreenViewController: GenericViewController<MainScreenView> {
 	
 	private var dataSource: UICollectionViewDiffableDataSource<Int, ToDo>!
 
-	private var todos: [ToDo] = []
-	private var displayedTasks: [ToDo] = []
+	private var allTasks: [ToDo] = []
+	private var filteredTasks: [ToDo] = []
 
 	// MARK: - Life Cycle
 
@@ -69,7 +69,13 @@ final class MainScreenViewController: GenericViewController<MainScreenView> {
 
 extension MainScreenViewController {
 	func showTasks(_ tasks: [ToDo]) {
-		// self.todos = tasks
+		allTasks = tasks
+		applySnapshot(with: tasks)
+		updateCategoryTaskCounts()
+	}
+
+	func showFilteredTasks(_ tasks: [ToDo]) {
+		filteredTasks = tasks
 		applySnapshot(with: tasks)
 		updateCategoryTaskCounts()
 	}
@@ -92,7 +98,7 @@ private extension MainScreenViewController {
 	func updateSnapshot() {
 		var snapshot = NSDiffableDataSourceSnapshot<Int, ToDo>()
 		snapshot.appendSections([0])
-		snapshot.appendItems(todos)
+		snapshot.appendItems(allTasks)
 		dataSource.apply(snapshot, animatingDifferences: true)
 
 		updateCategoryTaskCounts()
@@ -104,7 +110,7 @@ private extension MainScreenViewController {
 extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		todos[indexPath.item].completed.toggle()
+		allTasks[indexPath.item].completed.toggle()
 		updateSnapshot()
 		updateCategoryTaskCounts()
 	}
@@ -138,6 +144,7 @@ extension MainScreenViewController {
 extension MainScreenViewController {
 	@objc func showAllTasks() {
 		presenter?.selectCategory(.all)
+//		showTasks(displayedTasks)
 	}
 
 	@objc func showCompletedTasks() {
@@ -149,23 +156,19 @@ extension MainScreenViewController {
 	}
 
 	func applySnapshot(with tasks: [ToDo]) {
-		todos = tasks
-		self.displayedTasks = tasks // Update displayed tasks
 		var snapshot = NSDiffableDataSourceSnapshot<Int, ToDo>()
 		snapshot.appendSections([0])
 		snapshot.appendItems(tasks)
 		dataSource.apply(snapshot, animatingDifferences: true)
-
-		updateCategoryTaskCounts()
 	}
 
 	func updateCategoryTaskCounts() {
-		// Always use the full todos array to calculate counts
-		rootView.categoryAllTaskCountLabel.text = "\(todos.count)"
-		rootView.categoryOpenTaskCountLabel.text = "\(todos.filter { !$0.completed }.count)"
-		rootView.categoryClosedTaskCountLabel.text = "\(todos.filter { $0.completed }.count)"
+		rootView.categoryAllTaskCountLabel.text = "\(allTasks.count)"
+		rootView.categoryOpenTaskCountLabel.text = "\(allTasks.filter { !$0.completed }.count)"
+		rootView.categoryClosedTaskCountLabel.text = "\(allTasks.filter { $0.completed }.count)"
 	}
 
+	/// Method to highlight a selected category of tasks
 	func updateCategoryColors(selectedCategory: Category) {
 			switch selectedCategory {
 			case .all:

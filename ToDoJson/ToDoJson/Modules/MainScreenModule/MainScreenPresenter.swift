@@ -1,5 +1,6 @@
 protocol MainScreenPresenterProtocol: AnyObject {
-	var tasks: [ToDo] { get }
+	var allTasks: [ToDo] { get }
+	var filteredTasks: [ToDo] { get }
 	func viewDidLoad()
 	func newTaskButtonTapped()
 	func selectCategory(_ category: Category)
@@ -10,7 +11,8 @@ final class MainScreenPresenter: MainScreenPresenterProtocol {
 	var interactor: MainScreenInteractorProtocol?
 	var router: MainScreenRouterProtocol?
 
-	private(set) var tasks = [ToDo]()
+	private(set) var allTasks = [ToDo]()
+	private(set) var filteredTasks = [ToDo]()
 
 	func viewDidLoad() {
 		interactor?.loadTasks()
@@ -22,14 +24,20 @@ final class MainScreenPresenter: MainScreenPresenterProtocol {
 	}
 
 	func showTasks(_ tasks: [ToDo]) {
-		self.tasks = tasks
+		allTasks = tasks
 		view?.showTasks(tasks)
+	}
+
+	func showFilteredTasks(_ tasks: [ToDo]) {
+		filteredTasks = tasks
+		view?.showFilteredTasks(tasks)
 	}
 
 	// New Methods for Handling Category Selection
 		func selectCategory(_ category: Category) {
 			let filteredTasks = interactor?.filterTasks(by: category) ?? []
-			showTasks(filteredTasks)
+//			showTasks(filteredTasks)
+			showFilteredTasks(filteredTasks)
 			view?.updateCategoryColors(selectedCategory: category)
 		}
 }
