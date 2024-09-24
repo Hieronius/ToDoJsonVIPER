@@ -16,10 +16,10 @@ final class MainScreenPresenter: MainScreenPresenterProtocol {
 
 	func viewDidLoad() {
 		interactor?.loadTasks()
+		selectCategory(.all)
 	}
 
 	func newTaskButtonTapped() {
-		print("hello")
 		router?.navigateToTaskScreen()
 	}
 
@@ -33,11 +33,9 @@ final class MainScreenPresenter: MainScreenPresenterProtocol {
 		view?.showFilteredTasks(tasks)
 	}
 
-	// New Methods for Handling Category Selection
-		func selectCategory(_ category: Category) {
-			let filteredTasks = interactor?.filterTasks(by: category) ?? []
-//			showTasks(filteredTasks)
-			showFilteredTasks(filteredTasks)
-			view?.updateCategoryColors(selectedCategory: category)
-		}
+	func selectCategory(_ category: Category) {
+		let filteredTasks = interactor?.filterTasks(by: category) ?? []
+		showFilteredTasks(filteredTasks)
+		view?.updateCategoryColors(selectedCategory: category)
+	}
 }

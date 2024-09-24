@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A2A319CB2C951797001E2B66 /* ToDoDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2A319C92C951797001E2B66 /* ToDoDataModel.xcdatamodeld */; };
-		A2AB849E2C9C179700274A4B /* tasks.json in Resources */ = {isa = PBXBuildFile; fileRef = A2AB849D2C9C179700274A4B /* tasks.json */; };
 		A2B29B8C2C93C49500986359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B29B8B2C93C49500986359 /* AppDelegate.swift */; };
 		A2B29B8E2C93C49500986359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B29B8D2C93C49500986359 /* SceneDelegate.swift */; };
 		A2B29B902C93C49500986359 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B29B8F2C93C49500986359 /* MainScreenViewController.swift */; };
@@ -37,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		A2A319CA2C951797001E2B66 /* ToDoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoDataModel.xcdatamodel; sourceTree = "<group>"; };
-		A2AB849D2C9C179700274A4B /* tasks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tasks.json; sourceTree = "<group>"; };
 		A2B29B882C93C49500986359 /* ToDoJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoJson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B29B8B2C93C49500986359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2B29B8D2C93C49500986359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				A2B29B8D2C93C49500986359 /* SceneDelegate.swift */,
 				A2B29B942C93C49700986359 /* Assets.xcassets */,
 				A2B29B992C93C49700986359 /* Info.plist */,
-				A2AB849D2C9C179700274A4B /* tasks.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -265,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2AB849E2C9C179700274A4B /* tasks.json in Resources */,
 				A2B29B952C93C49700986359 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

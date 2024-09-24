@@ -18,10 +18,6 @@ final class MainScreenViewController: GenericViewController<MainScreenView> {
 		setupBehaviour()
 		configureCollectionView()
 
-
-		// Apply initial filter through presenter
-			 presenter?.selectCategory(.all)
-
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -134,7 +130,6 @@ extension MainScreenViewController {
 
 	@objc
 	func moveToTaskScreen() {
-		print("selected")
 		presenter?.newTaskButtonTapped()
 	}
 
@@ -145,7 +140,6 @@ extension MainScreenViewController {
 extension MainScreenViewController {
 	@objc func showAllTasks() {
 		presenter?.selectCategory(.all)
-//		showTasks(displayedTasks)
 	}
 
 	@objc func showCompletedTasks() {

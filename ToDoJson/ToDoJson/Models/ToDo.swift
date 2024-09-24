@@ -1,5 +1,17 @@
 import Foundation
 
+/// Main data stracture to handle data from JSON file
+struct ToDoResponse: Decodable {
+
+	/// Tasks
+	let todos: [ToDo]
+
+	/// Total Amount of the tasks
+	let total: Int
+	let skip: Int
+	let limit: Int
+}
+
 /// Model to store properties ot the `ToDo` from JSON file
 struct ToDo: Codable, Hashable {
 

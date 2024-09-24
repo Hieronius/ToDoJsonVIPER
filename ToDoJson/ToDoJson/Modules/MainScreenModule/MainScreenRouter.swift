@@ -25,7 +25,6 @@ class MainScreenRouter: MainScreenRouterProtocol {
 	}
 
 	func navigateToTaskScreen() {
-		print("you fuck are you here?")
 		let taskVC = TaskScreenRouter.createModule()
 		viewController?.navigationController?.pushViewController(taskVC, animated: true)
 	}
