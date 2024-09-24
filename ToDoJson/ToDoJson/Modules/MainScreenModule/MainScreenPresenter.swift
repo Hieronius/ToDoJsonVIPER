@@ -4,6 +4,7 @@ protocol MainScreenPresenterProtocol: AnyObject {
 	func viewDidLoad()
 	func newTaskButtonTapped()
 	func selectCategory(_ category: Category)
+	func editTask(_ task: ToDo)
 }
 
 final class MainScreenPresenter: MainScreenPresenterProtocol {
@@ -21,6 +22,10 @@ final class MainScreenPresenter: MainScreenPresenterProtocol {
 
 	func newTaskButtonTapped() {
 		router?.navigateToTaskScreen()
+	}
+
+	func editTask(_ task: ToDo) {
+		router?.navigateToEditTask(task)
 	}
 
 	func showTasks(_ tasks: [ToDo]) {

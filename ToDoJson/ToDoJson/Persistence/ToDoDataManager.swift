@@ -68,6 +68,7 @@ extension ToDoDataManager {
 		mo.todo = toDo.todo
 		mo.completed = toDo.completed
 		mo.taskDescription = toDo.taskDescription
+		mo.deadline = toDo.deadline
 
 		saveContext()
 	}

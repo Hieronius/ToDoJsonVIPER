@@ -2,6 +2,7 @@ import UIKit
 
 protocol MainScreenRouterProtocol {
 	func navigateToTaskScreen()
+	func navigateToEditTask(_ task: ToDo)
 }
 
 class MainScreenRouter: MainScreenRouterProtocol {
@@ -26,6 +27,12 @@ class MainScreenRouter: MainScreenRouterProtocol {
 
 	func navigateToTaskScreen() {
 		let taskVC = TaskScreenRouter.createModule()
+		viewController?.navigationController?.pushViewController(taskVC, animated: true)
+	}
+
+	func navigateToEditTask(_ task: ToDo) {
+		let taskVC = TaskScreenRouter.createModule(with: task)
+		print(task)
 		viewController?.navigationController?.pushViewController(taskVC, animated: true)
 	}
 }

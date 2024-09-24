@@ -3,12 +3,16 @@ import UIKit
 /// Controller for the `MainScreen`
 final class MainScreenViewController: GenericViewController<MainScreenView> {
 
+	// MARK: - Public Properties
+
 	var presenter: MainScreenPresenterProtocol?
-	
-	private var dataSource: UICollectionViewDiffableDataSource<Int, ToDo>!
+
+	// MARK: - Private Properties
 
 	private var allTasks: [ToDo] = []
 	private var filteredTasks: [ToDo] = []
+	
+	private var dataSource: UICollectionViewDiffableDataSource<Int, ToDo>!
 
 	// MARK: - Life Cycle
 
@@ -34,16 +38,37 @@ final class MainScreenViewController: GenericViewController<MainScreenView> {
 
 		   // Add delete action on swipe
 		   config.trailingSwipeActionsConfigurationProvider = { [unowned self] indexPath in
-			   let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { action, view, completionHandler in
-				   if let todo = self.dataSource.itemIdentifier(for: indexPath) {
-					   ToDoDataManager.shared.deleteToDo(withId: todo.id)
-					   var snapshot = self.dataSource.snapshot()
-					   snapshot.deleteItems([todo])
-					   self.dataSource.apply(snapshot, animatingDifferences: true)
-				   }
+
+			   guard let todo = self.dataSource.itemIdentifier(for: indexPath) else { return UISwipeActionsConfiguration(actions: []) }
+
+			   // Edit action
+			   let editAction = UIContextualAction(style: .normal, title: "Edit") { action, view, completionHandler in
+				   // Navigate to TaskScreen with the selected task for editing
+				   self.presenter?.editTask(todo)
 				   completionHandler(true)
 			   }
-			   return UISwipeActionsConfiguration(actions: [deleteAction])
+			   editAction.backgroundColor = .systemBlue
+
+			   let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { action, view, completionHandler in
+				   
+				   DispatchQueue.global(qos: .userInitiated).async {
+					   // Remove from data source
+					   if let index = self.allTasks.firstIndex(where: { $0.id == todo.id }) {
+						   self.allTasks.remove(at: index)
+					   }
+					   
+					   ToDoDataManager.shared.deleteToDo(withId: todo.id)
+					   DispatchQueue.main.async {
+						   var snapshot = self.dataSource.snapshot()
+						   snapshot.deleteItems([todo])
+						   self.dataSource.apply(snapshot, animatingDifferences: true)
+						   self.updateCategoryTaskCounts()
+						   completionHandler(true)
+					   }
+				   }
+			   }
+
+			   return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
 		   }
 
 		// Setup appearance of the config
@@ -107,9 +132,10 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		allTasks[indexPath.item].completed.toggle()
-		ToDoDataManager.shared.updateToDo(allTasks[indexPath.item])
 		updateSnapshot()
 		updateCategoryTaskCounts()
+		// should be in background
+		ToDoDataManager.shared.updateToDo(allTasks[indexPath.item])
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

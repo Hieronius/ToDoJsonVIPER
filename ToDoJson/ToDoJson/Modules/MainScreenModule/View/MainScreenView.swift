@@ -23,14 +23,18 @@ final class MainScreenView: UIView {
 
 	let categoriesContainerView = UIView()
 	let categoriesHorizontalStackView = UIStackView()
-	let categoryAllSummeryStackView = UIStackView() // add gesture
+
+	let categoryAllSummeryStackView = UIStackView()
 	let categoryAllNameLabel = UILabel()
 	let categoryAllTaskCountLabel = UILabel()
+
 	let pipeSeparatorView = UILabel()
-	let categoryOpenSummeryStackView = UIStackView() // add gesture
+
+	let categoryOpenSummeryStackView = UIStackView()
 	let categoryOpenNameLabel = UILabel()
 	let categoryOpenTaskCountLabel = UILabel()
-	let categoryClosedSummeryStackView = UIStackView() // add gesture
+	
+	let categoryClosedSummeryStackView = UIStackView()
 	let categoryClosedNameLabel = UILabel()
 	let categoryClosedTaskCountLabel = UILabel()
 

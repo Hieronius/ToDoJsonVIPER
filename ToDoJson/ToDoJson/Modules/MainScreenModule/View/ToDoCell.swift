@@ -42,9 +42,6 @@ class ToDoCell: UICollectionViewCell {
 		contentView.addSubview(bottomSpacerSeparator)
 		contentView.addSubview(topSpacerSeparator)
 
-
-
-
 		// Add subviews to vertical stack view
 
 		verticalStackView.addArrangedSubview(titleLabel)
@@ -54,8 +51,8 @@ class ToDoCell: UICollectionViewCell {
 		verticalStackView.addArrangedSubview(bottomSpacer)
 		verticalStackView.addArrangedSubview(deadlineLabel)
 
-
 		// Add vertical stack view and checkbox image view to horizontal stack view
+
 		horizontalStackView.addArrangedSubview(verticalStackView)
 		horizontalStackView.addArrangedSubview(checkboxImageView)
 	}
@@ -145,7 +142,7 @@ class ToDoCell: UICollectionViewCell {
 
 		deadlineLabel.text = todo.deadline != nil ? formatter.string(from: todo.deadline!) : "No deadline"
 
-		let imageName = todo.completed ? "checkmark.circle" : "circle"
+		let imageName = todo.completed ? "checkmark.circle.fill" : "circle"
 
 		checkboxImageView.image = UIImage(systemName: imageName)
 	}
