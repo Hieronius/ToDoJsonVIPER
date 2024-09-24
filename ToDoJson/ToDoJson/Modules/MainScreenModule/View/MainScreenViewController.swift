@@ -111,6 +111,7 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		allTasks[indexPath.item].completed.toggle()
+		ToDoDataManager.shared.updateToDo(allTasks[indexPath.item])
 		updateSnapshot()
 		updateCategoryTaskCounts()
 	}

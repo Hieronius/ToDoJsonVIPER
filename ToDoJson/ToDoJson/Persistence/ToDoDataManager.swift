@@ -88,7 +88,7 @@ extension ToDoDataManager {
 
 	/// Method to change `ToDoMO` accordingly to changes in `ToDo`
 	/// - Parameter todo: current version of `ToDo`
-	func updateToDo(todo: ToDo) {
+	func updateToDo(_ todo: ToDo) {
 		guard let mo = fetchMOsWith(id: todo.id) as? ToDoMO else { return }
 		mo.id = Int64(todo.id)
 		mo.todo = todo.todo

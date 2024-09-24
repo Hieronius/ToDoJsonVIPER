@@ -34,11 +34,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	}
 
 	func sceneWillEnterForeground(_ scene: UIScene) {
-		ToDoDataManager.shared.saveContext()
 	}
 
-	func sceneDidEnterBackground(_ scene: UIScene) {
+	// MARK: - Save changes to CoreData when user ends the work with the app
 
+	func sceneDidEnterBackground(_ scene: UIScene) {
+		ToDoDataManager.shared.saveContext()
 	}
 
 }
