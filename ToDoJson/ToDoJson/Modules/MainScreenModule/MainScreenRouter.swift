@@ -32,7 +32,6 @@ class MainScreenRouter: MainScreenRouterProtocol {
 
 	func navigateToEditTask(_ task: ToDo) {
 		let taskVC = TaskScreenRouter.createModule(with: task)
-		print(task)
 		viewController?.navigationController?.pushViewController(taskVC, animated: true)
 	}
 }
