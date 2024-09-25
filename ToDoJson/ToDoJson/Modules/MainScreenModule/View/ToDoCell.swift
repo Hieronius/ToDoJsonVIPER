@@ -1,19 +1,28 @@
 import UIKit
 
-class ToDoCell: UICollectionViewCell {
+/// Custom cell for  `ToDo` at the MainScreen
+final class ToDoCell: UICollectionViewCell {
+
+	// MARK: - Public Properties
+
+	/// Individual ID for the cell
 	static let reuseIdentifier = "ToDoCell"
 
 	// MARK: - Private Properties
 
 	private let titleLabel = UILabel()
 	private let descriptionLabel = UILabel()
-	private let deadlineLabel = UILabel()
 	private let checkboxImageView = UIImageView()
 	private let topSpacer = UIView()
 	private let dividerView = UIView()
 	private let bottomSpacer = UIView()
 	private let verticalStackView = UIStackView()
 	private let horizontalStackView = UIStackView()
+
+	private let dateStackView = UIStackView()
+	private let deadlineLabel = UILabel()
+	private let creationDateLabel = UILabel()
+	private let dateSpacer = UIView()
 
 	private let bottomSpacerSeparator = UIView()
 	private let topSpacerSeparator = UIView()
@@ -49,9 +58,14 @@ class ToDoCell: UICollectionViewCell {
 		verticalStackView.addArrangedSubview(topSpacer)
 		verticalStackView.addArrangedSubview(dividerView)
 		verticalStackView.addArrangedSubview(bottomSpacer)
-		verticalStackView.addArrangedSubview(deadlineLabel)
+
+		verticalStackView.addArrangedSubview(dateStackView)
 
 		// Add vertical stack view and checkbox image view to horizontal stack view
+
+		dateStackView.addArrangedSubview(creationDateLabel)
+		dateStackView.addArrangedSubview(deadlineLabel)
+		dateStackView.addArrangedSubview(dateSpacer)
 
 		horizontalStackView.addArrangedSubview(verticalStackView)
 		horizontalStackView.addArrangedSubview(checkboxImageView)
@@ -66,7 +80,10 @@ class ToDoCell: UICollectionViewCell {
 		descriptionLabel.textColor = .gray
 
 		deadlineLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-		deadlineLabel.textColor = .gray
+		deadlineLabel.textColor = .lightGray
+
+		creationDateLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+		creationDateLabel.textColor = .gray
 
 		// Configure checkbox image view
 		checkboxImageView.contentMode = .scaleAspectFit
@@ -81,6 +98,9 @@ class ToDoCell: UICollectionViewCell {
 
 		horizontalStackView.axis = .horizontal
 		horizontalStackView.spacing = 8
+
+		dateStackView.axis = .horizontal
+		dateStackView.spacing = 10
 
 		// Style the cell with rounded corners and background color
 		contentView.layer.cornerRadius = 15
@@ -137,10 +157,15 @@ class ToDoCell: UICollectionViewCell {
 		titleLabel.text = todo.todo
 		descriptionLabel.text = todo.taskDescription ?? ""
 
-		let formatter = DateFormatter()
-		formatter.dateStyle = .medium
+		let deadlineFormatter = DateFormatter()
+		deadlineFormatter.dateStyle = .medium
 
-		deadlineLabel.text = todo.deadline != nil ? formatter.string(from: todo.deadline!) : "No deadline"
+		deadlineLabel.text = todo.deadline != nil ? deadlineFormatter.string(from: todo.deadline ?? Date()) : "No deadline"
+
+		let dateCreationFormatter = DateFormatter()
+		dateCreationFormatter.dateStyle = .short
+
+		creationDateLabel.text = todo.creationDate != nil ? dateCreationFormatter.string(from: todo.creationDate ?? Date()) : "Today"
 
 		let imageName = todo.completed ? "checkmark.circle.fill" : "circle"
 
