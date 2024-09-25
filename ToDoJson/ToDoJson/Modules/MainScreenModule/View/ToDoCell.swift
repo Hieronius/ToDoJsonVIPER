@@ -10,14 +10,18 @@ final class ToDoCell: UICollectionViewCell {
 
 	// MARK: - Private Properties
 
+	private let topSpacerSeparator = UIView()
+
+	private let horizontalStackView = UIStackView()
+
+	private let verticalStackView = UIStackView()
+	
 	private let titleLabel = UILabel()
 	private let descriptionLabel = UILabel()
 	private let checkboxImageView = UIImageView()
 	private let topSpacer = UIView()
 	private let dividerView = UIView()
 	private let bottomSpacer = UIView()
-	private let verticalStackView = UIStackView()
-	private let horizontalStackView = UIStackView()
 
 	private let dateStackView = UIStackView()
 	private let deadlineLabel = UILabel()
@@ -25,7 +29,6 @@ final class ToDoCell: UICollectionViewCell {
 	private let dateSpacer = UIView()
 
 	private let bottomSpacerSeparator = UIView()
-	private let topSpacerSeparator = UIView()
 
 	// MARK: - Initialization
 
