@@ -15,7 +15,7 @@ final class ToDoCell: UICollectionViewCell {
 	private let horizontalStackView = UIStackView()
 
 	private let verticalStackView = UIStackView()
-	
+
 	private let titleLabel = UILabel()
 	private let descriptionLabel = UILabel()
 	private let checkboxImageView = UIImageView()

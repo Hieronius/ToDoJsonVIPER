@@ -173,7 +173,11 @@ private extension MainScreenView {
 
 	func setupData() {
 		headerTitle.text = "Today's Task"
-		headerSubTitle.text = "Wednesday, 11 May"
+
+		let currentDateFormatter = DateFormatter()
+		currentDateFormatter.dateFormat = "EEEE, MMM d"
+
+		headerSubTitle.text = currentDateFormatter.string(from: Date())
 		newTaskButton.setTitle("+ New Task", for: .normal)
 
 		categoryAllNameLabel.text = "All"
