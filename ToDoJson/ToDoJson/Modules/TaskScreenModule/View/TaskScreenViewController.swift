@@ -35,7 +35,6 @@ extension TaskScreenViewController {
 		rootView.doneButton.addTarget(self, action: #selector(saveTask), for: .touchUpInside)
 	}
 
-	// MARK: SaveTask and UpdateTask should be refactored accordingly to creationDate property
 	@objc
 	func saveTask() {
 		   let title = rootView.taskTitleTextField.text ?? ""
@@ -44,7 +43,7 @@ extension TaskScreenViewController {
 
 		   if let existingTask = task {
 			   // Update existing task without passing creationDate explicitly
-			   presenter?.updateTask(existingTask, title: title, description: description, deadline: deadline, creationDate: Date())
+			   presenter?.updateTask(existingTask, title: title, isCompleted: existingTask.completed, description: description, deadline: deadline, creationDate: Date())
 		   } else {
 			   // Create new task
 			   presenter?.saveTask(title: title, description: description, deadline: deadline, creationDate: Date())

@@ -76,7 +76,7 @@ final class ToDoCell: UICollectionViewCell {
 
 	private func setupAppearance() {
 		// Configure labels
-		titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+		titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
 		titleLabel.numberOfLines = 0
 
 		descriptionLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
@@ -110,8 +110,8 @@ final class ToDoCell: UICollectionViewCell {
 		contentView.layer.masksToBounds = true
 		contentView.backgroundColor = .white
 
-		bottomSpacerSeparator.backgroundColor = UIColor.customBackgroundColor
-		topSpacerSeparator.backgroundColor = UIColor.customBackgroundColor
+		bottomSpacerSeparator.backgroundColor = .customBackgroundColor
+		topSpacerSeparator.backgroundColor = .customBackgroundColor
 	}
 
 	private func setupLayout() {
@@ -158,6 +158,19 @@ final class ToDoCell: UICollectionViewCell {
 
 	func configure(with todo: ToDo) {
 		titleLabel.text = todo.todo
+
+		// Apply strikethrough if task is completed
+		if todo.completed {
+			let attributedString = NSAttributedString(string: todo.todo, attributes: [
+				.strikethroughStyle: NSUnderlineStyle.single.rawValue,
+				.foregroundColor: UIColor.black // Optional: change color for completed tasks
+			])
+			titleLabel.attributedText = attributedString
+		} else {
+			titleLabel.attributedText = NSAttributedString(string: todo.todo) // Reset to normal text
+		}
+
+
 		descriptionLabel.text = todo.taskDescription ?? ""
 
 		let deadlineFormatter = DateFormatter()

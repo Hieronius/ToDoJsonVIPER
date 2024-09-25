@@ -3,9 +3,9 @@ import UIKit
 /// RootView for the `MainScreen`
 final class MainScreenView: UIView {
 
-	// MARK: - Private Properties
+	// MARK: - UI Elements
 
-	let mainVerticalStackView = UIStackView()
+	private let mainVerticalStackView = UIStackView()
 
 	// MARK: Header
 
@@ -106,13 +106,21 @@ private extension MainScreenView {
 
 		// MARK: Tasks
 		collectionView.register(ToDoCell.self, forCellWithReuseIdentifier: ToDoCell.reuseIdentifier)
-		collectionView.isUserInteractionEnabled = true
 	}
 
 	// MARK: - Setup Appearance
 
 	func setupAppearance() {
 		backgroundColor = .customBackgroundColor
+
+		headerTitle.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+
+		newTaskButton.setTitleColor(.systemBlue, for: .normal)
+		newTaskButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+		newTaskButton.layer.cornerRadius = 15
+		newTaskButton.layer.masksToBounds = true
+		newTaskButton.backgroundColor = UIColor.blue.withAlphaComponent(0.1)
+
 
 		mainVerticalStackView.axis = .vertical
 		mainVerticalStackView.spacing = 25
@@ -178,7 +186,7 @@ private extension MainScreenView {
 		currentDateFormatter.dateFormat = "EEEE, MMM d"
 
 		headerSubTitle.text = currentDateFormatter.string(from: Date())
-		newTaskButton.setTitle("+ New Task", for: .normal)
+		newTaskButton.setTitle("  + New Task  ", for: .normal)
 
 		categoryAllNameLabel.text = "All"
 		categoryAllTaskCountLabel.text = "35"

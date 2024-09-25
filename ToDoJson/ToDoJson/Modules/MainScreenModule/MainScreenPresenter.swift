@@ -5,10 +5,12 @@ protocol MainScreenPresenterProtocol: AnyObject {
 	func newTaskButtonTapped()
 	func selectCategory(_ category: Category)
 	func editTask(_ task: ToDo)
+	func showTasks(_ tasks: [ToDo])
+	func showFilteredTasks(_ tasks: [ToDo])
 }
 
 final class MainScreenPresenter: MainScreenPresenterProtocol {
-	weak var view: MainScreenViewController?
+	weak var view: MainScreenViewInput?
 	var interactor: MainScreenInteractorProtocol?
 	var router: MainScreenRouterProtocol?
 
@@ -30,12 +32,12 @@ final class MainScreenPresenter: MainScreenPresenterProtocol {
 
 	func showTasks(_ tasks: [ToDo]) {
 		allTasks = tasks
-		view?.showTasks(tasks)
+		view?.displayTasks(tasks)
 	}
 
 	func showFilteredTasks(_ tasks: [ToDo]) {
 		filteredTasks = tasks
-		view?.showFilteredTasks(tasks)
+		view?.displayFilteredTasks(tasks)
 	}
 
 	func selectCategory(_ category: Category) {

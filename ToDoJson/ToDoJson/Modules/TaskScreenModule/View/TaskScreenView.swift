@@ -113,7 +113,6 @@ private extension TaskScreenView {
 
 		deadlineDatePicker.datePickerMode = .date
 
-		doneButton.setTitle("Done", for: .normal)
 		doneButton.setTitleColor(.systemBlue, for: .normal)
 		doneButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
 		doneButton.layer.cornerRadius = 15
@@ -166,5 +165,6 @@ private extension TaskScreenView {
 		taskDescriptionTextField.placeholder = "Enter description"
 		taskTitleTextField.placeholder = "Enter title"
 
+		doneButton.setTitle("Done", for: .normal)
 	}
 }
