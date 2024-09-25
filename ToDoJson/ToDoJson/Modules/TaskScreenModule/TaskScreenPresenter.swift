@@ -11,10 +11,10 @@ class TaskScreenPresenter: TaskScreenPresenterProtocol {
 	var router: TaskScreenRouterProtocol?
 
 	func saveTask (title: String, description: String?, deadline: Date?, creationDate: Date?) {
-		let newTask = ToDo(id: 100,
+		let newTask = ToDo(id: Int.random(in: 1...1000),
 						   todo: title,
 						   completed: false,
-						   userId: 200,
+						   userId: Int.random(in: 1...1000),
 						   taskDescription: description ?? "",
 						   deadline: deadline ?? Date(),
 						   creationDate: Date())
