@@ -77,7 +77,7 @@ class ToDoCell: UICollectionViewCell {
 
 		// Configure stack views
 		verticalStackView.axis = .vertical
-		verticalStackView.spacing = 4
+		verticalStackView.spacing = 1
 
 		horizontalStackView.axis = .horizontal
 		horizontalStackView.spacing = 8
