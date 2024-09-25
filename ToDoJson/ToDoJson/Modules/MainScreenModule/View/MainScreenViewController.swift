@@ -158,9 +158,9 @@ private extension MainScreenViewController {
 
 // MARK: - Setup DiffableDataSource
 
-private extension MainScreenViewController {
+extension MainScreenViewController {
 
-	func configureDataSource() {
+	private func configureDataSource() {
 		dataSource = UICollectionViewDiffableDataSource<Int, ToDo>(collectionView: rootView.collectionView) { (collectionView, indexPath, todo) -> UICollectionViewCell? in
 			guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ToDoCell.reuseIdentifier, for: indexPath) as? ToDoCell else {
 				fatalError("Cannot create new cell")
@@ -170,7 +170,7 @@ private extension MainScreenViewController {
 		}
 	}
 
-	func updateSnapshot() {
+	private func updateSnapshot() {
 		var snapshot = NSDiffableDataSourceSnapshot<Int, ToDo>()
 		snapshot.appendSections([0])
 		snapshot.appendItems(allTasks)
@@ -179,6 +179,7 @@ private extension MainScreenViewController {
 		updateCategoryTaskCounts()
 	}
 
+	/// Apply changes on the screen when you use trailing swipe gesture on the cell
 	func applySnapshot(with tasks: [ToDo]) {
 		var snapshot = NSDiffableDataSourceSnapshot<Int, ToDo>()
 		snapshot.appendSections([0])
