@@ -35,19 +35,19 @@ extension TaskScreenViewController {
 		rootView.doneButton.addTarget(self, action: #selector(saveTask), for: .touchUpInside)
 	}
 
+	// MARK: SaveTask and UpdateTask should be refactored accordingly to creationDate property
 	@objc
 	func saveTask() {
-		let title = rootView.taskTitleTextField.text ?? ""
-			   let description = rootView.taskDescriptionTextField.text ?? ""
-			   let deadline = rootView.deadlineDatePicker.date
+		   let title = rootView.taskTitleTextField.text ?? ""
+		   let description = rootView.taskDescriptionTextField.text ?? ""
+		   let deadline = rootView.deadlineDatePicker.date
 
-			   if let existingTask = task {
-				   // Update existing task
-				   presenter?.updateTask(existingTask, title: title, description: description, deadline: deadline)
-			   } else {
-				   // Create new task
-				   presenter?.saveTask(title: title, description: description, deadline: deadline)
-			   }
-		
-	}
+		   if let existingTask = task {
+			   // Update existing task without passing creationDate explicitly
+			   presenter?.updateTask(existingTask, title: title, description: description, deadline: deadline, creationDate: Date())
+		   } else {
+			   // Create new task
+			   presenter?.saveTask(title: title, description: description, deadline: deadline, creationDate: Date())
+		   }
+	   }
 }

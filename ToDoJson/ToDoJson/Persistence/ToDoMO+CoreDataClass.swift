@@ -18,7 +18,7 @@ extension ToDoMO {
 	@NSManaged public var userId: Int64
 	@NSManaged public var taskDescription: String?
 	@NSManaged public var deadline: Date?
-
+	@NSManaged public var creationDate: Date?
 }
 
 extension ToDoMO : Identifiable {

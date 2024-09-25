@@ -33,7 +33,7 @@ final class MainScreenInteractor: MainScreenInteractorProtocol {
 			DispatchQueue.global(qos: .utility).async { [weak self] in
 				guard let self else { return }
 
-				let coreDataTasks = ToDoDataManager.shared.fetchAllToDos()
+				let coreDataTasks = ToDoDataManager.shared.fetchAllToDosByCreationDate()
 
 				if coreDataTasks.isEmpty {
 					self.parseTasks { [weak self] jsonTasks in

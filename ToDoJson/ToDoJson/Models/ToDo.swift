@@ -16,6 +16,7 @@ struct ToDo: Codable, Hashable {
 	let userId: Int
 	var taskDescription: String?
 	var deadline: Date?
+	var creationDate: Date?
 }
 
 extension ToDo {
