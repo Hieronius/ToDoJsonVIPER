@@ -32,6 +32,8 @@
 		A2D7C82C2C996C690038DC93 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7C82B2C996C690038DC93 /* UIColor+CustomColor.swift */; };
 		A2FB18782C951C7000B5D2FD /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FB18772C951C7000B5D2FD /* PersistentContainer.swift */; };
 		A2FB187A2C951FF400B5D2FD /* ToDoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FB18792C951FF400B5D2FD /* ToDoDataManager.swift */; };
+		DD2FCAF32CA4FE00004E9222 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCAF22CA4FE00004E9222 /* UserManager.swift */; };
+		DD2FCAF52CA4FE27004E9222 /* TaskIDManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCAF42CA4FE27004E9222 /* TaskIDManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		A2D7C82B2C996C690038DC93 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		A2FB18772C951C7000B5D2FD /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		A2FB18792C951FF400B5D2FD /* ToDoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataManager.swift; sourceTree = "<group>"; };
+		DD2FCAF22CA4FE00004E9222 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		DD2FCAF42CA4FE27004E9222 /* TaskIDManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskIDManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		A2B29B8A2C93C49500986359 /* ToDoJson */ = {
 			isa = PBXGroup;
 			children = (
+				DD2FCAF12CA4FDDD004E9222 /* Services */,
 				A2BBAE972C93FDE900F65ADA /* Modules */,
 				A2BBAEA52C94039600F65ADA /* Persistence */,
 				A2BBAEA42C94039200F65ADA /* Network */,
@@ -204,6 +209,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DD2FCAF12CA4FDDD004E9222 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCAF22CA4FE00004E9222 /* UserManager.swift */,
+				DD2FCAF42CA4FE27004E9222 /* TaskIDManger.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,11 +300,13 @@
 				A2D7C8202C9967010038DC93 /* TaskScreenViewController.swift in Sources */,
 				A2BBAEA12C93FE4F00F65ADA /* MainScreenEntity.swift in Sources */,
 				A2A319CB2C951797001E2B66 /* ToDoDataModel.xcdatamodeld in Sources */,
+				DD2FCAF52CA4FE27004E9222 /* TaskIDManger.swift in Sources */,
 				A2D7C8282C9967310038DC93 /* TaskScreenEntity.swift in Sources */,
 				A2D7C8242C9967150038DC93 /* TaskScreenInteractor.swift in Sources */,
 				A2FB187A2C951FF400B5D2FD /* ToDoDataManager.swift in Sources */,
 				A2BBAEAA2C940EF600F65ADA /* ToDoService.swift in Sources */,
 				A2D7C82C2C996C690038DC93 /* UIColor+CustomColor.swift in Sources */,
+				DD2FCAF32CA4FE00004E9222 /* UserManager.swift in Sources */,
 				A2D7C8222C99670A0038DC93 /* TaskScreenView.swift in Sources */,
 				A2BBAE712C93E0A600F65ADA /* GenericViewController.swift in Sources */,
 				A2BBAE9D2C93FE4100F65ADA /* MainScreenInteractor.swift in Sources */,

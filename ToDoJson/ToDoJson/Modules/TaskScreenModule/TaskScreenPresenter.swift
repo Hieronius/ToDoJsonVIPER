@@ -10,17 +10,13 @@ class TaskScreenPresenter: TaskScreenPresenterProtocol {
 	var interactor: TaskScreenInteractorProtocol?
 	var router: TaskScreenRouterProtocol?
 
-	func saveTask (title: String, description: String?, deadline: Date?, creationDate: Date?) {
-		let newTask = ToDo(id: Int.random(in: 1...1000),
-						   todo: title,
-						   completed: false,
-						   userId: Int.random(in: 1...1000),
-						   taskDescription: description ?? "",
-						   deadline: deadline ?? Date(),
-						   creationDate: Date())
-			interactor?.createTask(newTask)
-			router?.navigateBackToMain()
-		}
+	func saveTask(title: String, description: String?, deadline: Date?, creationDate: Date?) {
+		// Call interactor's createTask method instead of creating a new task here
+		interactor?.createTask(title: title, description: description, deadline: deadline, creationDate: Date())
+
+		// Navigate back after saving
+		router?.navigateBackToMain()
+	}
 
 	func updateTask(_ task: ToDo, title: String, isCompleted: Bool, description: String?, deadline: Date?, creationDate: Date?) {
 			// Update the properties of the existing task
