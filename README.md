@@ -55,5 +55,6 @@ https://github.com/user-attachments/assets/026aec4e-e83e-44e7-9b50-fda8ce035845
 20. Implement "back" button to the TaskScreen in case if user changed mind to create the new one
 21. Refactor the way of cells being reused when you scroll the list of tasks.
 22. Find the way to implement swipe actions on cells with custom spacing between them via CollectionView + DiffableDataSource
+23. Cut View's into logical pieces by extensions: setupLayout, setupApperance and so on.
 
 
