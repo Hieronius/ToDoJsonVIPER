@@ -1,7 +1,5 @@
 import Foundation
 
-import Foundation
-
 class UserManager {
 	static let shared = UserManager()
 	private(set) var userId: Int?

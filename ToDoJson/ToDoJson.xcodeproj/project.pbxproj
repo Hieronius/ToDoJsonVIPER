@@ -115,8 +115,8 @@
 		A2B29B8A2C93C49500986359 /* ToDoJson */ = {
 			isa = PBXGroup;
 			children = (
-				DD2FCAF12CA4FDDD004E9222 /* Services */,
 				A2BBAE972C93FDE900F65ADA /* Modules */,
+				DD2FCAF12CA4FDDD004E9222 /* Services */,
 				A2BBAEA52C94039600F65ADA /* Persistence */,
 				A2BBAEA42C94039200F65ADA /* Network */,
 				A2AEB5602C9C0199009E0D60 /* Models */,
