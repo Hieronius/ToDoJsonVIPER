@@ -166,7 +166,7 @@ final class ToDoCell: UICollectionViewCell {
 				.foregroundColor: UIColor.black // Optional: change color for completed tasks
 			])
 			titleLabel.attributedText = attributedString
-		} else {
+		} else if !todo.completed {
 			titleLabel.attributedText = NSAttributedString(string: todo.todo) // Reset to normal text
 		}
 
