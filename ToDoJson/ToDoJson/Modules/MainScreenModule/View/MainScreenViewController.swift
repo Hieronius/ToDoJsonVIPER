@@ -194,7 +194,11 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
 
 	/// Called when a user selects an item in the collection view.
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		allTasks[indexPath.item].completed.toggle()
+		if allTasks[indexPath.item].completed {
+			allTasks[indexPath.item].completed = false
+		} else if !allTasks[indexPath.item].completed {
+			allTasks[indexPath.item].completed = true
+		}
 		updateSnapshot()
 		updateCategoryTaskCounts()
 		ToDoDataManager.shared.updateToDo(allTasks[indexPath.item])
