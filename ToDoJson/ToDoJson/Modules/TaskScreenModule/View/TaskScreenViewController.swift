@@ -12,6 +12,7 @@ protocol TaskScreenViewInput: AnyObject {
 	func populateFieldsIfEditing()
 }
 
+/// `Controller` of the TaskScreen
 final class TaskScreenViewController: GenericViewController<TaskScreenView> {
 
 	// MARK: - Public Properties
