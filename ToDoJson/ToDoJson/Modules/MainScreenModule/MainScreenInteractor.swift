@@ -7,7 +7,7 @@ protocol MainScreenInteractorProtocol {
 }
 
 final class MainScreenInteractor: MainScreenInteractorProtocol {
-	var presenter: MainScreenPresenter?
+	weak var presenter: MainScreenPresenter?
 
 	private let todoService: ToDoService
 
