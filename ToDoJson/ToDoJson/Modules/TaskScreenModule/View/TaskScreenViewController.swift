@@ -1,5 +1,17 @@
 import UIKit
 
+/// Protocol that defines the interface for the View to communicate with the Presenter.
+///
+/// The `TaskScreenViewInput` protocol is implemented by the View (e.g., `TaskScreenViewController`)
+/// to receive updates from the Presenter. It provides methods for populating task details.
+protocol TaskScreenViewInput: AnyObject {
+
+	/// Populates the UI with task details for editing.
+	///
+	/// - Parameter task: The `ToDo` object representing the task to be displayed.
+	func populateFieldsIfEditing()
+}
+
 final class TaskScreenViewController: GenericViewController<TaskScreenView> {
 
 	// MARK: - Public Properties
@@ -17,9 +29,9 @@ final class TaskScreenViewController: GenericViewController<TaskScreenView> {
 
 }
 
-// MARK: - Private
+// MARK: - TaskScreenViewInput
 
-private extension TaskScreenViewController {
+extension TaskScreenViewController: TaskScreenViewInput {
 	func populateFieldsIfEditing() {
 			guard let task = task else { return }
 			rootView.taskTitleTextField.text = task.todo
@@ -42,10 +54,10 @@ extension TaskScreenViewController {
 		   let deadline = rootView.deadlineDatePicker.date
 
 		   if let existingTask = task {
-			   // Update existing task without passing creationDate explicitly
+
 			   presenter?.updateTask(existingTask, title: title, isCompleted: existingTask.completed, description: description, deadline: deadline, creationDate: Date())
 		   } else {
-			   // Create new task
+
 			   presenter?.saveTask(title: title, description: description, deadline: deadline, creationDate: Date())
 		   }
 	   }

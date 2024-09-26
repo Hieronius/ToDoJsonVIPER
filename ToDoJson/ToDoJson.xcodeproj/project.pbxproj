@@ -16,7 +16,6 @@
 		A2BBAE732C93E0C100F65ADA /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBAE722C93E0C100F65ADA /* MainScreenView.swift */; };
 		A2BBAE9D2C93FE4100F65ADA /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBAE9C2C93FE4100F65ADA /* MainScreenInteractor.swift */; };
 		A2BBAE9F2C93FE4700F65ADA /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBAE9E2C93FE4700F65ADA /* MainScreenPresenter.swift */; };
-		A2BBAEA12C93FE4F00F65ADA /* MainScreenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBAEA02C93FE4F00F65ADA /* MainScreenEntity.swift */; };
 		A2BBAEA32C93FE5900F65ADA /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBAEA22C93FE5900F65ADA /* MainScreenRouter.swift */; };
 		A2BBAEA82C940EDE00F65ADA /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBAEA72C940EDE00F65ADA /* ToDo.swift */; };
 		A2BBAEAA2C940EF600F65ADA /* ToDoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBAEA92C940EF600F65ADA /* ToDoService.swift */; };
@@ -27,14 +26,49 @@
 		A2D7C8222C99670A0038DC93 /* TaskScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7C8212C99670A0038DC93 /* TaskScreenView.swift */; };
 		A2D7C8242C9967150038DC93 /* TaskScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7C8232C9967150038DC93 /* TaskScreenInteractor.swift */; };
 		A2D7C8262C99671F0038DC93 /* TaskScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7C8252C99671F0038DC93 /* TaskScreenPresenter.swift */; };
-		A2D7C8282C9967310038DC93 /* TaskScreenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7C8272C9967310038DC93 /* TaskScreenEntity.swift */; };
 		A2D7C82A2C9967530038DC93 /* TaskScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7C8292C9967530038DC93 /* TaskScreenRouter.swift */; };
 		A2D7C82C2C996C690038DC93 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7C82B2C996C690038DC93 /* UIColor+CustomColor.swift */; };
 		A2FB18782C951C7000B5D2FD /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FB18772C951C7000B5D2FD /* PersistentContainer.swift */; };
 		A2FB187A2C951FF400B5D2FD /* ToDoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FB18792C951FF400B5D2FD /* ToDoDataManager.swift */; };
 		DD2FCAF32CA4FE00004E9222 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCAF22CA4FE00004E9222 /* UserManager.swift */; };
 		DD2FCAF52CA4FE27004E9222 /* TaskIDManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCAF42CA4FE27004E9222 /* TaskIDManger.swift */; };
+		DD2FCB052CA50D57004E9222 /* MainScreenViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB042CA50D57004E9222 /* MainScreenViewControllerTests.swift */; };
+		DD2FCB0B2CA5154F004E9222 /* MainScreenViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB0A2CA5154F004E9222 /* MainScreenViewTests.swift */; };
+		DD2FCB0D2CA5175E004E9222 /* MainScreenPresenterProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB0C2CA5175E004E9222 /* MainScreenPresenterProtocolMock.swift */; };
+		DD2FCB112CA51AF2004E9222 /* MainScreenViewInputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB102CA51AF2004E9222 /* MainScreenViewInputMock.swift */; };
+		DD2FCB132CA51B1F004E9222 /* MainScreenInteractorProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB122CA51B1F004E9222 /* MainScreenInteractorProtocolMock.swift */; };
+		DD2FCB152CA51B90004E9222 /* MainScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB142CA51B90004E9222 /* MainScreenPresenterTests.swift */; };
+		DD2FCB172CA51BD4004E9222 /* MainScreenRouterProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB162CA51BD4004E9222 /* MainScreenRouterProtocolMock.swift */; };
+		DD2FCB192CA51CFD004E9222 /* MainScreenRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB182CA51CFD004E9222 /* MainScreenRouterTests.swift */; };
+		DD2FCB1B2CA51D45004E9222 /* UIViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB1A2CA51D45004E9222 /* UIViewControllerMock.swift */; };
+		DD2FCB1D2CA51DD3004E9222 /* ToDoServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB1C2CA51DD3004E9222 /* ToDoServiceMock.swift */; };
+		DD2FCB1F2CA51E02004E9222 /* ToDoDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB1E2CA51E02004E9222 /* ToDoDataManagerMock.swift */; };
+		DD2FCB212CA51E58004E9222 /* MainScreenInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB202CA51E58004E9222 /* MainScreenInteractorTests.swift */; };
+		DD2FCB232CA51FF8004E9222 /* MainScreenPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB222CA51FF8004E9222 /* MainScreenPresenterMock.swift */; };
+		DD2FCB2D2CA527B2004E9222 /* TaskScreenViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB2C2CA527B2004E9222 /* TaskScreenViewControllerTests.swift */; };
+		DD2FCB2F2CA52854004E9222 /* TaskScreenPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB2E2CA52854004E9222 /* TaskScreenPresenterMock.swift */; };
+		DD2FCB312CA528CD004E9222 /* TaskScreenViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB302CA528CD004E9222 /* TaskScreenViewTests.swift */; };
+		DD2FCB332CA529CE004E9222 /* TaskScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB322CA529CE004E9222 /* TaskScreenPresenterTests.swift */; };
+		DD2FCB352CA52A53004E9222 /* TaskScreenInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB342CA52A53004E9222 /* TaskScreenInteractorMock.swift */; };
+		DD2FCB372CA52ABB004E9222 /* TaskScreenRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB362CA52ABB004E9222 /* TaskScreenRouterMock.swift */; };
+		DD2FCB392CA532F6004E9222 /* TaskScreenViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB382CA532F6004E9222 /* TaskScreenViewControllerMock.swift */; };
+		DD2FCB3B2CA5341C004E9222 /* TaskScreenViewControllerInputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB3A2CA5341C004E9222 /* TaskScreenViewControllerInputMock.swift */; };
+		DD2FCB3D2CA53534004E9222 /* TaskScreenInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB3C2CA53533004E9222 /* TaskScreenInteractorTests.swift */; };
+		DD2FCB3F2CA536AE004E9222 /* UserManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB3E2CA536AE004E9222 /* UserManagerMock.swift */; };
+		DD2FCB412CA536D1004E9222 /* TaskIDManegerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB402CA536D1004E9222 /* TaskIDManegerMock.swift */; };
+		DD2FCB432CA539D7004E9222 /* TaskScreenRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB422CA539D7004E9222 /* TaskScreenRouterTests.swift */; };
+		DD2FCB452CA53A06004E9222 /* ViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB442CA53A06004E9222 /* ViewControllerMock.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD2FCAFE2CA50C9E004E9222 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2B29B802C93C49500986359 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2B29B872C93C49500986359;
+			remoteInfo = ToDoJson;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A2A319CA2C951797001E2B66 /* ToDoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -48,7 +82,6 @@
 		A2BBAE722C93E0C100F65ADA /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		A2BBAE9C2C93FE4100F65ADA /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
 		A2BBAE9E2C93FE4700F65ADA /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
-		A2BBAEA02C93FE4F00F65ADA /* MainScreenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenEntity.swift; sourceTree = "<group>"; };
 		A2BBAEA22C93FE5900F65ADA /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
 		A2BBAEA72C940EDE00F65ADA /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		A2BBAEA92C940EF600F65ADA /* ToDoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoService.swift; sourceTree = "<group>"; };
@@ -59,17 +92,50 @@
 		A2D7C8212C99670A0038DC93 /* TaskScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenView.swift; sourceTree = "<group>"; };
 		A2D7C8232C9967150038DC93 /* TaskScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenInteractor.swift; sourceTree = "<group>"; };
 		A2D7C8252C99671F0038DC93 /* TaskScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenPresenter.swift; sourceTree = "<group>"; };
-		A2D7C8272C9967310038DC93 /* TaskScreenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenEntity.swift; sourceTree = "<group>"; };
 		A2D7C8292C9967530038DC93 /* TaskScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenRouter.swift; sourceTree = "<group>"; };
 		A2D7C82B2C996C690038DC93 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		A2FB18772C951C7000B5D2FD /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		A2FB18792C951FF400B5D2FD /* ToDoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataManager.swift; sourceTree = "<group>"; };
 		DD2FCAF22CA4FE00004E9222 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		DD2FCAF42CA4FE27004E9222 /* TaskIDManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskIDManger.swift; sourceTree = "<group>"; };
+		DD2FCAFA2CA50C9E004E9222 /* ToDoJsonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoJsonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD2FCB042CA50D57004E9222 /* MainScreenViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewControllerTests.swift; sourceTree = "<group>"; };
+		DD2FCB0A2CA5154F004E9222 /* MainScreenViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewTests.swift; sourceTree = "<group>"; };
+		DD2FCB0C2CA5175E004E9222 /* MainScreenPresenterProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenterProtocolMock.swift; sourceTree = "<group>"; };
+		DD2FCB102CA51AF2004E9222 /* MainScreenViewInputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewInputMock.swift; sourceTree = "<group>"; };
+		DD2FCB122CA51B1F004E9222 /* MainScreenInteractorProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractorProtocolMock.swift; sourceTree = "<group>"; };
+		DD2FCB142CA51B90004E9222 /* MainScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenterTests.swift; sourceTree = "<group>"; };
+		DD2FCB162CA51BD4004E9222 /* MainScreenRouterProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouterProtocolMock.swift; sourceTree = "<group>"; };
+		DD2FCB182CA51CFD004E9222 /* MainScreenRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouterTests.swift; sourceTree = "<group>"; };
+		DD2FCB1A2CA51D45004E9222 /* UIViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerMock.swift; sourceTree = "<group>"; };
+		DD2FCB1C2CA51DD3004E9222 /* ToDoServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoServiceMock.swift; sourceTree = "<group>"; };
+		DD2FCB1E2CA51E02004E9222 /* ToDoDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataManagerMock.swift; sourceTree = "<group>"; };
+		DD2FCB202CA51E58004E9222 /* MainScreenInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractorTests.swift; sourceTree = "<group>"; };
+		DD2FCB222CA51FF8004E9222 /* MainScreenPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenterMock.swift; sourceTree = "<group>"; };
+		DD2FCB2C2CA527B2004E9222 /* TaskScreenViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenViewControllerTests.swift; sourceTree = "<group>"; };
+		DD2FCB2E2CA52854004E9222 /* TaskScreenPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenPresenterMock.swift; sourceTree = "<group>"; };
+		DD2FCB302CA528CD004E9222 /* TaskScreenViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenViewTests.swift; sourceTree = "<group>"; };
+		DD2FCB322CA529CE004E9222 /* TaskScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenPresenterTests.swift; sourceTree = "<group>"; };
+		DD2FCB342CA52A53004E9222 /* TaskScreenInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenInteractorMock.swift; sourceTree = "<group>"; };
+		DD2FCB362CA52ABB004E9222 /* TaskScreenRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenRouterMock.swift; sourceTree = "<group>"; };
+		DD2FCB382CA532F6004E9222 /* TaskScreenViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenViewControllerMock.swift; sourceTree = "<group>"; };
+		DD2FCB3A2CA5341C004E9222 /* TaskScreenViewControllerInputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenViewControllerInputMock.swift; sourceTree = "<group>"; };
+		DD2FCB3C2CA53533004E9222 /* TaskScreenInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenInteractorTests.swift; sourceTree = "<group>"; };
+		DD2FCB3E2CA536AE004E9222 /* UserManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerMock.swift; sourceTree = "<group>"; };
+		DD2FCB402CA536D1004E9222 /* TaskIDManegerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskIDManegerMock.swift; sourceTree = "<group>"; };
+		DD2FCB422CA539D7004E9222 /* TaskScreenRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenRouterTests.swift; sourceTree = "<group>"; };
+		DD2FCB442CA53A06004E9222 /* ViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A2B29B852C93C49500986359 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD2FCAF72CA50C9E004E9222 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -100,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				A2B29B8A2C93C49500986359 /* ToDoJson */,
+				DD2FCAFB2CA50C9E004E9222 /* ToDoJsonTests */,
 				A2B29B892C93C49500986359 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				A2B29B882C93C49500986359 /* ToDoJson.app */,
+				DD2FCAFA2CA50C9E004E9222 /* ToDoJsonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,9 +229,8 @@
 				A2C28D482C968D11001D055C /* View */,
 				A2BBAE9C2C93FE4100F65ADA /* MainScreenInteractor.swift */,
 				A2BBAE9E2C93FE4700F65ADA /* MainScreenPresenter.swift */,
-				A2BBAEA02C93FE4F00F65ADA /* MainScreenEntity.swift */,
 				A2BBAEA22C93FE5900F65ADA /* MainScreenRouter.swift */,
-				A2C468272C9FE52000ECCF90 /* Category.swift */,
+				DD2FCB0E2CA519CB004E9222 /* Common */,
 			);
 			path = MainScreenModule;
 			sourceTree = "<group>";
@@ -174,7 +241,6 @@
 				A2AEB55E2C9A98C9009E0D60 /* View */,
 				A2D7C8232C9967150038DC93 /* TaskScreenInteractor.swift */,
 				A2D7C8252C99671F0038DC93 /* TaskScreenPresenter.swift */,
-				A2D7C8272C9967310038DC93 /* TaskScreenEntity.swift */,
 				A2D7C8292C9967530038DC93 /* TaskScreenRouter.swift */,
 			);
 			path = TaskScreenModule;
@@ -218,6 +284,127 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		DD2FCAFB2CA50C9E004E9222 /* ToDoJsonTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB032CA50D41004E9222 /* MainScreenModule */,
+				DD2FCB272CA525CA004E9222 /* TaskScreenModule */,
+			);
+			path = ToDoJsonTests;
+			sourceTree = "<group>";
+		};
+		DD2FCB032CA50D41004E9222 /* MainScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB0F2CA51ACA004E9222 /* MainScreenMocks */,
+				DD2FCB262CA52332004E9222 /* MainScreenTests */,
+			);
+			path = MainScreenModule;
+			sourceTree = "<group>";
+		};
+		DD2FCB0E2CA519CB004E9222 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A2C468272C9FE52000ECCF90 /* Category.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DD2FCB0F2CA51ACA004E9222 /* MainScreenMocks */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB252CA522E0004E9222 /* MockObjects */,
+				DD2FCB242CA522DB004E9222 /* MockProtocols */,
+			);
+			path = MainScreenMocks;
+			sourceTree = "<group>";
+		};
+		DD2FCB242CA522DB004E9222 /* MockProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB162CA51BD4004E9222 /* MainScreenRouterProtocolMock.swift */,
+				DD2FCB122CA51B1F004E9222 /* MainScreenInteractorProtocolMock.swift */,
+				DD2FCB0C2CA5175E004E9222 /* MainScreenPresenterProtocolMock.swift */,
+			);
+			path = MockProtocols;
+			sourceTree = "<group>";
+		};
+		DD2FCB252CA522E0004E9222 /* MockObjects */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB222CA51FF8004E9222 /* MainScreenPresenterMock.swift */,
+				DD2FCB1E2CA51E02004E9222 /* ToDoDataManagerMock.swift */,
+				DD2FCB1C2CA51DD3004E9222 /* ToDoServiceMock.swift */,
+				DD2FCB1A2CA51D45004E9222 /* UIViewControllerMock.swift */,
+				DD2FCB102CA51AF2004E9222 /* MainScreenViewInputMock.swift */,
+			);
+			path = MockObjects;
+			sourceTree = "<group>";
+		};
+		DD2FCB262CA52332004E9222 /* MainScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB042CA50D57004E9222 /* MainScreenViewControllerTests.swift */,
+				DD2FCB0A2CA5154F004E9222 /* MainScreenViewTests.swift */,
+				DD2FCB142CA51B90004E9222 /* MainScreenPresenterTests.swift */,
+				DD2FCB182CA51CFD004E9222 /* MainScreenRouterTests.swift */,
+				DD2FCB202CA51E58004E9222 /* MainScreenInteractorTests.swift */,
+			);
+			path = MainScreenTests;
+			sourceTree = "<group>";
+		};
+		DD2FCB272CA525CA004E9222 /* TaskScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB282CA525D2004E9222 /* TaskScreenMocks */,
+				DD2FCB292CA525D9004E9222 /* TaskScreenTests */,
+			);
+			path = TaskScreenModule;
+			sourceTree = "<group>";
+		};
+		DD2FCB282CA525D2004E9222 /* TaskScreenMocks */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB2A2CA525F6004E9222 /* MockObjects */,
+				DD2FCB2B2CA52602004E9222 /* MockProtocols */,
+			);
+			path = TaskScreenMocks;
+			sourceTree = "<group>";
+		};
+		DD2FCB292CA525D9004E9222 /* TaskScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB2C2CA527B2004E9222 /* TaskScreenViewControllerTests.swift */,
+				DD2FCB302CA528CD004E9222 /* TaskScreenViewTests.swift */,
+				DD2FCB322CA529CE004E9222 /* TaskScreenPresenterTests.swift */,
+				DD2FCB3C2CA53533004E9222 /* TaskScreenInteractorTests.swift */,
+				DD2FCB422CA539D7004E9222 /* TaskScreenRouterTests.swift */,
+			);
+			path = TaskScreenTests;
+			sourceTree = "<group>";
+		};
+		DD2FCB2A2CA525F6004E9222 /* MockObjects */ = {
+			isa = PBXGroup;
+			children = (
+				DD2FCB2E2CA52854004E9222 /* TaskScreenPresenterMock.swift */,
+				DD2FCB342CA52A53004E9222 /* TaskScreenInteractorMock.swift */,
+				DD2FCB362CA52ABB004E9222 /* TaskScreenRouterMock.swift */,
+				DD2FCB382CA532F6004E9222 /* TaskScreenViewControllerMock.swift */,
+				DD2FCB3A2CA5341C004E9222 /* TaskScreenViewControllerInputMock.swift */,
+				DD2FCB3E2CA536AE004E9222 /* UserManagerMock.swift */,
+				DD2FCB402CA536D1004E9222 /* TaskIDManegerMock.swift */,
+				DD2FCB442CA53A06004E9222 /* ViewControllerMock.swift */,
+			);
+			path = MockObjects;
+			sourceTree = "<group>";
+		};
+		DD2FCB2B2CA52602004E9222 /* MockProtocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MockProtocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +425,24 @@
 			productReference = A2B29B882C93C49500986359 /* ToDoJson.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DD2FCAF92CA50C9E004E9222 /* ToDoJsonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD2FCB002CA50C9E004E9222 /* Build configuration list for PBXNativeTarget "ToDoJsonTests" */;
+			buildPhases = (
+				DD2FCAF62CA50C9E004E9222 /* Sources */,
+				DD2FCAF72CA50C9E004E9222 /* Frameworks */,
+				DD2FCAF82CA50C9E004E9222 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD2FCAFF2CA50C9E004E9222 /* PBXTargetDependency */,
+			);
+			name = ToDoJsonTests;
+			productName = ToDoJsonTests;
+			productReference = DD2FCAFA2CA50C9E004E9222 /* ToDoJsonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -245,11 +450,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					A2B29B872C93C49500986359 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					DD2FCAF92CA50C9E004E9222 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A2B29B872C93C49500986359;
 					};
 				};
 			};
@@ -267,6 +476,7 @@
 			projectRoot = "";
 			targets = (
 				A2B29B872C93C49500986359 /* ToDoJson */,
+				DD2FCAF92CA50C9E004E9222 /* ToDoJsonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +487,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2B29B952C93C49700986359 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD2FCAF82CA50C9E004E9222 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,10 +515,8 @@
 				A2BBAEA82C940EDE00F65ADA /* ToDo.swift in Sources */,
 				A2B29B8C2C93C49500986359 /* AppDelegate.swift in Sources */,
 				A2D7C8202C9967010038DC93 /* TaskScreenViewController.swift in Sources */,
-				A2BBAEA12C93FE4F00F65ADA /* MainScreenEntity.swift in Sources */,
 				A2A319CB2C951797001E2B66 /* ToDoDataModel.xcdatamodeld in Sources */,
 				DD2FCAF52CA4FE27004E9222 /* TaskIDManger.swift in Sources */,
-				A2D7C8282C9967310038DC93 /* TaskScreenEntity.swift in Sources */,
 				A2D7C8242C9967150038DC93 /* TaskScreenInteractor.swift in Sources */,
 				A2FB187A2C951FF400B5D2FD /* ToDoDataManager.swift in Sources */,
 				A2BBAEAA2C940EF600F65ADA /* ToDoService.swift in Sources */,
@@ -316,7 +531,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD2FCAF62CA50C9E004E9222 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD2FCB0B2CA5154F004E9222 /* MainScreenViewTests.swift in Sources */,
+				DD2FCB372CA52ABB004E9222 /* TaskScreenRouterMock.swift in Sources */,
+				DD2FCB212CA51E58004E9222 /* MainScreenInteractorTests.swift in Sources */,
+				DD2FCB412CA536D1004E9222 /* TaskIDManegerMock.swift in Sources */,
+				DD2FCB232CA51FF8004E9222 /* MainScreenPresenterMock.swift in Sources */,
+				DD2FCB0D2CA5175E004E9222 /* MainScreenPresenterProtocolMock.swift in Sources */,
+				DD2FCB112CA51AF2004E9222 /* MainScreenViewInputMock.swift in Sources */,
+				DD2FCB312CA528CD004E9222 /* TaskScreenViewTests.swift in Sources */,
+				DD2FCB1B2CA51D45004E9222 /* UIViewControllerMock.swift in Sources */,
+				DD2FCB172CA51BD4004E9222 /* MainScreenRouterProtocolMock.swift in Sources */,
+				DD2FCB452CA53A06004E9222 /* ViewControllerMock.swift in Sources */,
+				DD2FCB3B2CA5341C004E9222 /* TaskScreenViewControllerInputMock.swift in Sources */,
+				DD2FCB1D2CA51DD3004E9222 /* ToDoServiceMock.swift in Sources */,
+				DD2FCB152CA51B90004E9222 /* MainScreenPresenterTests.swift in Sources */,
+				DD2FCB132CA51B1F004E9222 /* MainScreenInteractorProtocolMock.swift in Sources */,
+				DD2FCB052CA50D57004E9222 /* MainScreenViewControllerTests.swift in Sources */,
+				DD2FCB2F2CA52854004E9222 /* TaskScreenPresenterMock.swift in Sources */,
+				DD2FCB332CA529CE004E9222 /* TaskScreenPresenterTests.swift in Sources */,
+				DD2FCB432CA539D7004E9222 /* TaskScreenRouterTests.swift in Sources */,
+				DD2FCB2D2CA527B2004E9222 /* TaskScreenViewControllerTests.swift in Sources */,
+				DD2FCB352CA52A53004E9222 /* TaskScreenInteractorMock.swift in Sources */,
+				DD2FCB3F2CA536AE004E9222 /* UserManagerMock.swift in Sources */,
+				DD2FCB392CA532F6004E9222 /* TaskScreenViewControllerMock.swift in Sources */,
+				DD2FCB1F2CA51E02004E9222 /* ToDoDataManagerMock.swift in Sources */,
+				DD2FCB192CA51CFD004E9222 /* MainScreenRouterTests.swift in Sources */,
+				DD2FCB3D2CA53534004E9222 /* TaskScreenInteractorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD2FCAFF2CA50C9E004E9222 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2B29B872C93C49500986359 /* ToDoJson */;
+			targetProxy = DD2FCAFE2CA50C9E004E9222 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A2B29B9A2C93C49700986359 /* Debug */ = {
@@ -506,6 +762,48 @@
 			};
 			name = Release;
 		};
+		DD2FCB012CA50C9E004E9222 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7YW3V66545;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HieroniusTeam.ToDoJsonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoJson.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoJson";
+			};
+			name = Debug;
+		};
+		DD2FCB022CA50C9E004E9222 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7YW3V66545;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HieroniusTeam.ToDoJsonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoJson.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoJson";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -523,6 +821,15 @@
 			buildConfigurations = (
 				A2B29B9D2C93C49700986359 /* Debug */,
 				A2B29B9E2C93C49700986359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD2FCB002CA50C9E004E9222 /* Build configuration list for PBXNativeTarget "ToDoJsonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD2FCB012CA50C9E004E9222 /* Debug */,
+				DD2FCB022CA50C9E004E9222 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

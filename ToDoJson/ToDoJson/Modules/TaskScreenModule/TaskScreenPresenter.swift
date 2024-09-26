@@ -6,7 +6,7 @@ protocol TaskScreenPresenterProtocol {
 }
 
 class TaskScreenPresenter: TaskScreenPresenterProtocol {
-	weak var view: TaskScreenViewController?
+	weak var view: TaskScreenViewInput?
 	var interactor: TaskScreenInteractorProtocol?
 	var router: TaskScreenRouterProtocol?
 

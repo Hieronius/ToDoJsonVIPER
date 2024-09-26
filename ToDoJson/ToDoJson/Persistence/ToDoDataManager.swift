@@ -1,7 +1,13 @@
 import CoreData
 
+protocol ToDoDataManagerProtocol {
+	func fetchAllToDos() -> [ToDo]
+	func fetchAllToDosByCreationDate() -> [ToDo]
+	func createToDoMO(_ todo: ToDo)
+}
+
 /// App Data Storage Manager
-final class ToDoDataManager {
+class ToDoDataManager: ToDoDataManagerProtocol {
 
 	// MARK: Public Properties
 

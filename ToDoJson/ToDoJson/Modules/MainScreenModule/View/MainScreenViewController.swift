@@ -73,6 +73,7 @@ final class MainScreenViewController: GenericViewController<MainScreenView> {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		presenter?.viewDidLoad()
+		updateSnapshot()
 	}
 }
 
@@ -80,8 +81,8 @@ final class MainScreenViewController: GenericViewController<MainScreenView> {
 
 // MARK: - SetupBehaviour
 
-private extension MainScreenViewController {
-	func setupBehaviour() {
+extension MainScreenViewController {
+	private func setupBehaviour() {
 		rootView.collectionView.delegate = self
 
 		rootView.newTaskButton.addTarget(self, action: #selector(moveToTaskScreen), for: .touchUpInside)

@@ -1,7 +1,7 @@
 import Foundation
 
 /// A special service to handle and fetch and get `Tasks` from JSON file
-final class ToDoService {
+class ToDoService {
 	private let urlString = "https://dummyjson.com/todos"
 
 	/// Method to get tasks from JSON
