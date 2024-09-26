@@ -1,7 +1,22 @@
 import UIKit
 
+/// Protocol that defines the interface for routing in the Main Screen module.
+///
+/// The `MainScreenRouterProtocol` is implemented by the Router (e.g., `MainScreenRouter`)
+/// to handle navigation between screens and to create the module.
 protocol MainScreenRouterProtocol {
+
+	/// Creates and configures the Main Screen module.
+	///
+	/// - Returns: A configured instance of `UIViewController` representing the Main Screen.
+	static func createModule() -> UIViewController
+
+	/// Navigates to the Task screen.
 	func navigateToTaskScreen()
+
+	/// Navigates to the Edit Task screen with a specific task.
+	///
+	/// - Parameter task: The `ToDo` object representing the task to be edited.
 	func navigateToEditTask(_ task: ToDo)
 }
 
