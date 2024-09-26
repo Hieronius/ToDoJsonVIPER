@@ -4,7 +4,7 @@ protocol TaskScreenRouterProtocol {
 	func navigateBackToMain()
 }
 
-class TaskScreenRouter: TaskScreenRouterProtocol {
+final class TaskScreenRouter: TaskScreenRouterProtocol {
 	weak var viewController: UIViewController?
 	
 	static func createModule(with task: ToDo? = nil) -> UIViewController {
@@ -12,8 +12,7 @@ class TaskScreenRouter: TaskScreenRouterProtocol {
 		let presenter = TaskScreenPresenter()
 		let interactor = TaskScreenInteractor()
 		let router = TaskScreenRouter()
-
-		// Inject UserManager and TaskIDManager into Interactor
+		
 		interactor.setUserManager(UserManager.shared)
 		interactor.setTaskIDManager(TaskIDManager.shared)
 		

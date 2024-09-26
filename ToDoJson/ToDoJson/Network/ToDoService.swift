@@ -12,7 +12,6 @@ class ToDoService {
 			return
 		}
 
-		// Use a background queue for network requests
 		DispatchQueue.global(qos: .utility).async {
 			let task = URLSession.shared.dataTask(with: url) { data, response, error in
 				if let error = error {

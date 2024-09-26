@@ -104,7 +104,6 @@ private extension MainScreenView {
 		categoryClosedSummeryStackView.addArrangedSubview(categoryClosedNameLabel)
 		categoryClosedSummeryStackView.addArrangedSubview(categoryClosedTaskCountLabel)
 
-		// MARK: Tasks
 		collectionView.register(ToDoCell.self, forCellWithReuseIdentifier: ToDoCell.reuseIdentifier)
 	}
 
@@ -120,7 +119,6 @@ private extension MainScreenView {
 		newTaskButton.layer.cornerRadius = 15
 		newTaskButton.layer.masksToBounds = true
 		newTaskButton.backgroundColor = UIColor.blue.withAlphaComponent(0.1)
-
 
 		mainVerticalStackView.axis = .vertical
 		mainVerticalStackView.spacing = 25
@@ -150,7 +148,6 @@ private extension MainScreenView {
 
 		collectionView.backgroundColor = .clear
 		collectionView.showsVerticalScrollIndicator = false
-
 	}
 
 	// MARK: - Setup Layout
@@ -173,7 +170,7 @@ private extension MainScreenView {
 			mainVerticalStackView.bottomAnchor.constraint(equalTo:safeAreaLayoutGuide.bottomAnchor),
 
 			headerContainerView.heightAnchor.constraint(equalToConstant: 75),
-			categoriesContainerView.heightAnchor.constraint(equalToConstant: 25),
+			categoriesContainerView.heightAnchor.constraint(equalToConstant: 25)
 		])
 	}
 
@@ -198,8 +195,5 @@ private extension MainScreenView {
 		categoryClosedTaskCountLabel.text = "19"
 
 		pipeSeparatorView.text = " | "
-
-		// Collection view stuff
-
 	}
 }

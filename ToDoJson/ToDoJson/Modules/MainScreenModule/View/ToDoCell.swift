@@ -37,8 +37,6 @@ final class ToDoCell: UICollectionViewCell {
 		embedViews()
 		setupAppearance()
 		setupLayout()
-		setupBehaviour()
-		setupData()
 	}
 
 	@available(*, unavailable)
@@ -49,12 +47,9 @@ final class ToDoCell: UICollectionViewCell {
 	// MARK: - Private Methods
 
 	private func embedViews() {
-		// Add container view to content view
 		contentView.addSubview(horizontalStackView)
 		contentView.addSubview(bottomSpacerSeparator)
 		contentView.addSubview(topSpacerSeparator)
-
-		// Add subviews to vertical stack view
 
 		verticalStackView.addArrangedSubview(titleLabel)
 		verticalStackView.addArrangedSubview(descriptionLabel)
@@ -63,8 +58,6 @@ final class ToDoCell: UICollectionViewCell {
 		verticalStackView.addArrangedSubview(bottomSpacer)
 
 		verticalStackView.addArrangedSubview(dateStackView)
-
-		// Add vertical stack view and checkbox image view to horizontal stack view
 
 		dateStackView.addArrangedSubview(creationDateLabel)
 		dateStackView.addArrangedSubview(deadlineLabel)
@@ -75,7 +68,6 @@ final class ToDoCell: UICollectionViewCell {
 	}
 
 	private func setupAppearance() {
-		// Configure labels
 		titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
 		titleLabel.numberOfLines = 0
 
@@ -88,14 +80,11 @@ final class ToDoCell: UICollectionViewCell {
 		creationDateLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
 		creationDateLabel.textColor = .gray
 
-		// Configure checkbox image view
 		checkboxImageView.contentMode = .scaleAspectFit
 		checkboxImageView.isUserInteractionEnabled = true
 
-		// Configure divider view
 		dividerView.backgroundColor = .lightGray
 
-		// Configure stack views
 		verticalStackView.axis = .vertical
 		verticalStackView.spacing = 1
 
@@ -105,7 +94,6 @@ final class ToDoCell: UICollectionViewCell {
 		dateStackView.axis = .horizontal
 		dateStackView.spacing = 10
 
-		// Style the cell with rounded corners and background color
 		contentView.layer.cornerRadius = 15
 		contentView.layer.masksToBounds = true
 		contentView.backgroundColor = .white
@@ -121,63 +109,48 @@ final class ToDoCell: UICollectionViewCell {
 
 		NSLayoutConstraint.activate([
 
-
 			topSpacerSeparator.topAnchor.constraint(equalTo: contentView.topAnchor),
 			topSpacerSeparator.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
 			topSpacerSeparator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-			topSpacerSeparator.heightAnchor.constraint(equalToConstant: 5), // Adjust height as needed
+			topSpacerSeparator.heightAnchor.constraint(equalToConstant: 5),
 
-
-			// Constraints for horizontalStackView within middleContainerView with padding
 			horizontalStackView.topAnchor.constraint(equalTo: topSpacerSeparator.bottomAnchor, constant: 8),
 			horizontalStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
 			horizontalStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
 
-			// Constraints for bottomSpacerSeparator at the bottom of content view
 			bottomSpacerSeparator.topAnchor.constraint(equalTo: horizontalStackView.bottomAnchor, constant: 8),
 			bottomSpacerSeparator.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
 			bottomSpacerSeparator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
 			bottomSpacerSeparator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-			bottomSpacerSeparator.heightAnchor.constraint(equalToConstant: 5), // Adjust height as needed
+			bottomSpacerSeparator.heightAnchor.constraint(equalToConstant: 5),
 
 			topSpacer.heightAnchor.constraint(equalToConstant: 5),
 			dividerView.heightAnchor.constraint(equalToConstant: 1),
 			bottomSpacer.heightAnchor.constraint(equalToConstant: 5),
 
-			checkboxImageView.widthAnchor.constraint(equalToConstant: 24), // Set a fixed width for the checkbox
+			checkboxImageView.widthAnchor.constraint(equalToConstant: 24)
 		])
-	}
-
-	private func setupBehaviour() {
-		// Add any interactive behavior here (e.g., tap gestures)
-	}
-
-	private func setupData() {
-		// Initialize default data if needed
 	}
 
 	func configure(with todo: ToDo) {
 		titleLabel.text = todo.todo
 
-		// Apply strikethrough if task is completed
 		if todo.completed {
 			let attributedString = NSAttributedString(string: todo.todo, attributes: [
 				.strikethroughStyle: NSUnderlineStyle.single.rawValue,
-				.foregroundColor: UIColor.black // Optional: change color for completed tasks
+				.foregroundColor: UIColor.black
 			])
 			titleLabel.attributedText = attributedString
 		} else if !todo.completed {
-			titleLabel.attributedText = NSAttributedString(string: todo.todo) // Reset to normal text
+			titleLabel.attributedText = NSAttributedString(string: todo.todo)
 		}
-
-
 		descriptionLabel.text = todo.taskDescription ?? ""
 
 		let deadlineFormatter = DateFormatter()
 		deadlineFormatter.dateStyle = .medium
 
 		deadlineLabel.text = todo.deadline != nil ? deadlineFormatter.string(from: todo.deadline ?? Date()) : "No deadline"
-
+		
 		let dateCreationFormatter = DateFormatter()
 		dateCreationFormatter.dateStyle = .short
 

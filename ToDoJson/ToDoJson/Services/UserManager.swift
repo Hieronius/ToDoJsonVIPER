@@ -1,6 +1,7 @@
 import Foundation
 
-class UserManager {
+/// Manager to generate a unique user id when app launches in first time or to return an existing one
+final class UserManager {
 	static let shared = UserManager()
 	private(set) var userId: Int?
 

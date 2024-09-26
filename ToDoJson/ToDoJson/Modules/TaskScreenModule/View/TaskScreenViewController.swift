@@ -17,7 +17,7 @@ final class TaskScreenViewController: GenericViewController<TaskScreenView> {
 	// MARK: - Public Properties
 
 	var presenter: TaskScreenPresenterProtocol?
-	var task: ToDo? // Optional task for editing
+	var task: ToDo?
 
 	// MARK: - Life Cycle
 
@@ -26,18 +26,17 @@ final class TaskScreenViewController: GenericViewController<TaskScreenView> {
 		setupBehaviour()
 		populateFieldsIfEditing()
 	}
-
 }
 
 // MARK: - TaskScreenViewInput
 
 extension TaskScreenViewController: TaskScreenViewInput {
 	func populateFieldsIfEditing() {
-			guard let task = task else { return }
-			rootView.taskTitleTextField.text = task.todo
-			rootView.taskDescriptionTextField.text = task.taskDescription
-			rootView.deadlineDatePicker.date = task.deadline ?? Date()
-		}
+		guard let task = task else { return }
+		rootView.taskTitleTextField.text = task.todo
+		rootView.taskDescriptionTextField.text = task.taskDescription
+		rootView.deadlineDatePicker.date = task.deadline ?? Date()
+	}
 }
 
 // MARK: - SetupBehaviour
@@ -49,16 +48,16 @@ extension TaskScreenViewController {
 
 	@objc
 	func saveTask() {
-		   let title = rootView.taskTitleTextField.text ?? ""
-		   let description = rootView.taskDescriptionTextField.text ?? ""
-		   let deadline = rootView.deadlineDatePicker.date
+		let title = rootView.taskTitleTextField.text ?? ""
+		let description = rootView.taskDescriptionTextField.text ?? ""
+		let deadline = rootView.deadlineDatePicker.date
 
-		   if let existingTask = task {
+		if let existingTask = task {
 
-			   presenter?.updateTask(existingTask, title: title, isCompleted: existingTask.completed, description: description, deadline: deadline, creationDate: Date())
-		   } else {
+			presenter?.updateTask(existingTask, title: title, isCompleted: existingTask.completed, description: description, deadline: deadline, creationDate: Date())
+		} else {
 
-			   presenter?.saveTask(title: title, description: description, deadline: deadline, creationDate: Date())
-		   }
-	   }
+			presenter?.saveTask(title: title, description: description, deadline: deadline, creationDate: Date())
+		}
+	}
 }

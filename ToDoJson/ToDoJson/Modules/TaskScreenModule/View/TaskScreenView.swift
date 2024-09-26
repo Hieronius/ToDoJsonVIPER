@@ -2,48 +2,49 @@ import UIKit
 
 /// RootView for the `TaskScreen`
 final class TaskScreenView: UIView {
-
-	// MARK: - Private Properties
-
+	
+	// MARK: - Properties
+	
 	private let mainVerticalStackView = UIStackView()
-
+	
 	// MARK: Task Title Section
-
+	
 	private let taskTitleContainerView = UIView()
 	private let taskTitleHorizontalStackView = UIStackView()
 	private let taskTitleVerticalStackView = UIStackView()
 	private let taskTitleLabel = UILabel()
 	let taskTitleTextField = UITextField()
-
+	
 	// MARK: Task Description Section
+	
 	private let topSpacer = UIView()
 	private let taskDescriptionLabel = UILabel()
 	let taskDescriptionTextField = UITextField()
-
+	
 	// MARK: Deadline Section
-
+	
 	private let midSpacer = UIView()
 	private let deadlineContainerView = UIView()
 	private let deadlineHorizontalStackView = UIStackView()
 	private let deadlineLabel = UILabel()
 	let deadlineDatePicker = UIDatePicker()
 	private let bottomSpacer = UIView()
-
+	
 	// MARK: Done Button
-
+	
 	let doneButton = UIButton()
-
+	
 	// MARK: - Initialization
-
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		embedViews()
 		setupAppearance()
 		setupLayout()
-		setupBehaviour()
 		setupData()
 	}
-
+	
+	@available(*, unavailable)
 	required init(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
@@ -52,56 +53,54 @@ final class TaskScreenView: UIView {
 // MARK: - Private Methods
 
 private extension TaskScreenView {
-
+	
 	// MARK: - Embed Views
-
+	
 	func embedViews() {
 		addSubview(mainVerticalStackView)
-
+		
 		mainVerticalStackView.addArrangedSubview(taskTitleContainerView)
-//		 mainVerticalStackView.addArrangedSubview(topSpacer)
 		mainVerticalStackView.addArrangedSubview(taskDescriptionLabel)
 		mainVerticalStackView.addArrangedSubview(taskDescriptionTextField)
-		 mainVerticalStackView.addArrangedSubview(midSpacer) // Spacer
+		mainVerticalStackView.addArrangedSubview(midSpacer)
 		mainVerticalStackView.addArrangedSubview(deadlineContainerView)
-		mainVerticalStackView.addArrangedSubview(doneButton) // Move Done button here
-		mainVerticalStackView.addArrangedSubview(bottomSpacer) // Spacer
-
+		mainVerticalStackView.addArrangedSubview(doneButton)
+		mainVerticalStackView.addArrangedSubview(bottomSpacer)
+		
 		taskTitleContainerView.addSubview(taskTitleHorizontalStackView)
 		taskTitleHorizontalStackView.addArrangedSubview(taskTitleVerticalStackView)
-
+		
 		taskTitleVerticalStackView.addArrangedSubview(taskTitleLabel)
 		taskTitleVerticalStackView.addArrangedSubview(taskTitleTextField)
-
+		
 		deadlineContainerView.addSubview(deadlineHorizontalStackView)
 		deadlineHorizontalStackView.addArrangedSubview(deadlineLabel)
 		deadlineHorizontalStackView.addArrangedSubview(deadlineDatePicker)
-
 	}
-
+	
 	// MARK: - Setup Appearance
-
+	
 	func setupAppearance() {
 		backgroundColor = .customBackgroundColor
-
+		
 		mainVerticalStackView.axis = .vertical
 		mainVerticalStackView.spacing = 10
-
+		
 		taskTitleHorizontalStackView.axis = .horizontal
 		taskTitleHorizontalStackView.spacing = 8
-
+		
 		taskTitleVerticalStackView.axis = .vertical
 		taskTitleVerticalStackView.spacing = 5
-
+		
 		deadlineHorizontalStackView.axis = .horizontal
 		deadlineHorizontalStackView.spacing = 5
-
+		
 		[taskTitleLabel, taskDescriptionLabel, deadlineLabel].forEach {
 			$0.font = UIFont.systemFont(ofSize: 16, weight: .medium)
 			$0.textColor = .black
 			$0.numberOfLines = 1
 		}
-
+		
 		[taskDescriptionTextField, taskTitleTextField].forEach {
 			$0.borderStyle = .roundedRect
 			$0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
@@ -110,61 +109,57 @@ private extension TaskScreenView {
 			$0.layer.cornerRadius = 5
 			$0.layer.masksToBounds = true
 		}
-
+		
 		deadlineDatePicker.datePickerMode = .date
-
+		
 		doneButton.setTitleColor(.systemBlue, for: .normal)
 		doneButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
 		doneButton.layer.cornerRadius = 15
 		doneButton.layer.masksToBounds = true
 		doneButton.backgroundColor = UIColor.blue.withAlphaComponent(0.1)
 	}
-
+	
 	// MARK: - Setup Layout
-
+	
 	func setupLayout() {
 		mainVerticalStackView.translatesAutoresizingMaskIntoConstraints = false
 		taskTitleHorizontalStackView.translatesAutoresizingMaskIntoConstraints = false
 		deadlineHorizontalStackView.translatesAutoresizingMaskIntoConstraints = false
-
+		
 		NSLayoutConstraint.activate([
 			mainVerticalStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
 			mainVerticalStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
 			mainVerticalStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
 			mainVerticalStackView.bottomAnchor.constraint(equalTo:safeAreaLayoutGuide.bottomAnchor, constant: -16),
-
+			
 			taskTitleHorizontalStackView.topAnchor.constraint(equalTo: taskTitleContainerView.topAnchor),
 			taskTitleHorizontalStackView.leadingAnchor.constraint(equalTo: taskTitleContainerView.leadingAnchor),
 			taskTitleHorizontalStackView.trailingAnchor.constraint(equalTo: taskTitleContainerView.trailingAnchor),
 			taskTitleHorizontalStackView.bottomAnchor.constraint(equalTo: taskTitleContainerView.bottomAnchor),
-
+			
 			deadlineHorizontalStackView.topAnchor.constraint(equalTo: deadlineContainerView.topAnchor),
 			deadlineHorizontalStackView.leadingAnchor.constraint(equalTo: deadlineContainerView.leadingAnchor),
 			deadlineHorizontalStackView.trailingAnchor.constraint(equalTo: deadlineContainerView.trailingAnchor),
 			deadlineHorizontalStackView.bottomAnchor.constraint(equalTo: deadlineContainerView.bottomAnchor),
-
+			
 			taskDescriptionTextField.heightAnchor.constraint(equalToConstant: 40),
 			taskTitleTextField.heightAnchor.constraint(equalToConstant: 40),
 			bottomSpacer.heightAnchor.constraint(greaterThanOrEqualToConstant: 100),
-
+			
 			doneButton.heightAnchor.constraint(equalToConstant: 40),
 			doneButton.leadingAnchor.constraint(equalTo: mainVerticalStackView.leadingAnchor),
 			doneButton.trailingAnchor.constraint(equalTo: mainVerticalStackView.trailingAnchor),
 		])
 	}
-
-	func setupBehaviour() {
-		// Add any interactive behavior here (e.g., button actions)
-	}
-
+	
 	func setupData() {
 		taskTitleLabel.text = "Task Title"
 		taskDescriptionLabel.text = "Task Description"
 		deadlineLabel.text = "Deadline"
-
+		
 		taskDescriptionTextField.placeholder = "Enter description"
 		taskTitleTextField.placeholder = "Enter title"
-
+		
 		doneButton.setTitle("Done", for: .normal)
 	}
 }

@@ -5,7 +5,7 @@ protocol MainScreenRouterProtocol {
 	func navigateToEditTask(_ task: ToDo)
 }
 
-class MainScreenRouter: MainScreenRouterProtocol {
+final class MainScreenRouter: MainScreenRouterProtocol {
 	weak var viewController: UIViewController?
 
 	static func createModule() -> UIViewController {
