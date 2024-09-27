@@ -58,6 +58,7 @@
 		DD2FCB412CA536D1004E9222 /* TaskIDManegerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB402CA536D1004E9222 /* TaskIDManegerMock.swift */; };
 		DD2FCB432CA539D7004E9222 /* TaskScreenRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB422CA539D7004E9222 /* TaskScreenRouterTests.swift */; };
 		DD2FCB452CA53A06004E9222 /* ViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB442CA53A06004E9222 /* ViewControllerMock.swift */; };
+		DDCB757E2CA636CC00671699 /* MainScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB757D2CA636CC00671699 /* MainScreenContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		DD2FCB402CA536D1004E9222 /* TaskIDManegerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskIDManegerMock.swift; sourceTree = "<group>"; };
 		DD2FCB422CA539D7004E9222 /* TaskScreenRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenRouterTests.swift; sourceTree = "<group>"; };
 		DD2FCB442CA53A06004E9222 /* ViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMock.swift; sourceTree = "<group>"; };
+		DDCB757D2CA636CC00671699 /* MainScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				A2BBAE9C2C93FE4100F65ADA /* MainScreenInteractor.swift */,
 				A2BBAE9E2C93FE4700F65ADA /* MainScreenPresenter.swift */,
 				A2BBAEA22C93FE5900F65ADA /* MainScreenRouter.swift */,
+				DDCB757D2CA636CC00671699 /* MainScreenContract.swift */,
 				DD2FCB0E2CA519CB004E9222 /* Common */,
 			);
 			path = MainScreenModule;
@@ -509,6 +512,7 @@
 				A2BBAE732C93E0C100F65ADA /* MainScreenView.swift in Sources */,
 				A2FB18782C951C7000B5D2FD /* PersistentContainer.swift in Sources */,
 				A2BBAEA32C93FE5900F65ADA /* MainScreenRouter.swift in Sources */,
+				DDCB757E2CA636CC00671699 /* MainScreenContract.swift in Sources */,
 				A2D7C82A2C9967530038DC93 /* TaskScreenRouter.swift in Sources */,
 				A2BBAE9F2C93FE4700F65ADA /* MainScreenPresenter.swift in Sources */,
 				A2C28D452C966CD4001D055C /* ToDoMO+CoreDataClass.swift in Sources */,
