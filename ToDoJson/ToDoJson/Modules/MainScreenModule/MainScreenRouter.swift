@@ -4,7 +4,7 @@ import UIKit
 ///
 /// The `MainScreenRouterProtocol` is implemented by the Router (e.g., `MainScreenRouter`)
 /// to handle navigation between screens and to create the module.
-protocol MainScreenRouterProtocol {
+protocol MainScreenRouterProtocol: AnyObject {
 
 	/// Creates and configures the Main Screen module.
 	///

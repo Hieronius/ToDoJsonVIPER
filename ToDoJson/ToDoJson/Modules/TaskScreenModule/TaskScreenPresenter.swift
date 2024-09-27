@@ -4,7 +4,7 @@ import Foundation
 ///
 /// The `TaskScreenPresenterProtocol` is implemented by the Presenter (e.g., `TaskScreenPresenter`)
 /// to handle user interactions related to task creation and updates.
-protocol TaskScreenPresenterProtocol {
+protocol TaskScreenPresenterProtocol: AnyObject {
 
 	/// Saves a new task with the specified details.
 	///

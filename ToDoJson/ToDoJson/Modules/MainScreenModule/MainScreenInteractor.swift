@@ -4,7 +4,7 @@ import Foundation
 ///
 /// The `MainScreenInteractorProtocol` is implemented by the interactor (e.g., `MainScreenInteractor`)
 /// to handle task management operations such as parsing, loading, and filtering tasks.
-protocol MainScreenInteractorProtocol {
+protocol MainScreenInteractorProtocol: AnyObject {
 
 	/// Parses tasks from a data source and returns them asynchronously.
 	///

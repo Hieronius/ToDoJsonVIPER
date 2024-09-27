@@ -4,7 +4,7 @@ import UIKit
 ///
 /// The `TaskScreenRouterProtocol` is implemented by the Router (e.g., `TaskScreenRouter`)
 /// to handle navigation between screens and to create the Task Screen module.
-protocol TaskScreenRouterProtocol {
+protocol TaskScreenRouterProtocol: AnyObject {
 
 	/// Creates and configures the Task Screen module.
 	///

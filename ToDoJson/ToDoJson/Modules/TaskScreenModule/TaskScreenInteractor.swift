@@ -4,7 +4,7 @@ import Foundation
 ///
 /// The `TaskScreenInteractorProtocol` is implemented by the interactor (e.g., `TaskScreenInteractor`)
 /// to handle the creation and updating of tasks, as well as managing user and task ID information.
-protocol TaskScreenInteractorProtocol {
+protocol TaskScreenInteractorProtocol: AnyObject {
 
 	/// Creates a new task with the specified details.
 	///
