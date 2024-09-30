@@ -13,7 +13,7 @@ final class MainScreenViewController: GenericViewController<MainScreenView> {
 	private var allTasks: [ToDo] = []
 	private var filteredTasks: [ToDo] = []
 	
-	private var dataSource: UICollectionViewDiffableDataSource<Int, ToDo>!
+	private var dataSource: UICollectionViewDiffableDataSource<Int, ToDo>?
 	
 	// MARK: - Life Cycle
 	
@@ -129,8 +129,10 @@ private extension MainScreenViewController {
 	func configureCollectionView() {
 		var config = UICollectionLayoutListConfiguration(appearance: .plain)
 		config.trailingSwipeActionsConfigurationProvider = { [unowned self] indexPath in
-			
-			guard let todo = self.dataSource.itemIdentifier(for: indexPath) else { return UISwipeActionsConfiguration(actions: []) }
+
+			guard let dataSource else { return UISwipeActionsConfiguration(actions: []) }
+
+			guard let todo = dataSource.itemIdentifier(for: indexPath) else { return UISwipeActionsConfiguration(actions: []) }
 			
 			let editAction = UIContextualAction(style: .normal, title: "Edit") { action, view, completionHandler in
 				self.presenter?.editTask(todo)
@@ -148,9 +150,9 @@ private extension MainScreenViewController {
 					ToDoDataManager.shared.deleteToDo(withId: todo.id)
 					
 					DispatchQueue.main.async {
-						var snapshot = self.dataSource.snapshot()
+						var snapshot = dataSource.snapshot()
 						snapshot.deleteItems([todo])
-						self.dataSource.apply(snapshot, animatingDifferences: true)
+						dataSource.apply(snapshot, animatingDifferences: true)
 						self.updateCategoryTaskCounts()
 						completionHandler(true)
 					}
@@ -184,6 +186,9 @@ extension MainScreenViewController {
 		var snapshot = NSDiffableDataSourceSnapshot<Int, ToDo>()
 		snapshot.appendSections([0])
 		snapshot.appendItems(allTasks)
+
+		guard let dataSource else { return }
+
 		dataSource.apply(snapshot, animatingDifferences: true)
 		
 		updateCategoryTaskCounts()
@@ -194,6 +199,9 @@ extension MainScreenViewController {
 		var snapshot = NSDiffableDataSourceSnapshot<Int, ToDo>()
 		snapshot.appendSections([0])
 		snapshot.appendItems(tasks)
+
+		guard let dataSource else { return }
+
 		dataSource.apply(snapshot, animatingDifferences: true)
 	}
 }
