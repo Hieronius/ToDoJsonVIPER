@@ -10,12 +10,26 @@ struct ToDoResponse: Decodable {
 
 /// Model to store properties ot the `ToDo` from JSON file
 struct ToDo: Codable, Hashable {
+
+	/// `id` of the specific todo
 	let id: Int
+
+	/// `todo` it's self
 	var todo: String
+
+	/// Is task done or note
 	var completed: Bool
+
+	/// UserID generated unique when the app been running in first time
 	let userId: Int
+
+	/// Some details about the todo
 	var taskDescription: String?
+
+	/// Time to end the task
 	var deadline: Date?
+
+	/// Time when task has been created or modified
 	var creationDate: Date?
 }
 
