@@ -1,6 +1,5 @@
 import UIKit
 
-
 /// `Router` of the MainScreen with tasks
 final class MainScreenRouter: MainScreenRouterProtocol {
 	weak var viewController: UIViewController?
