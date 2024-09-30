@@ -1,29 +1,5 @@
 import Foundation
 
-/// Protocol that defines the interface for the interactor to manage tasks.
-///
-/// The `MainScreenInteractorProtocol` is implemented by the interactor (e.g., `MainScreenInteractor`)
-/// to handle task management operations such as parsing, loading, and filtering tasks.
-protocol MainScreenInteractorProtocol: AnyObject {
-
-	/// Parses tasks from a data source and returns them asynchronously.
-	///
-	/// - Parameter completion: A closure that takes an array of `ToDo` objects as its parameter.
-	/// This closure is called once the parsing is complete with the parsed tasks.
-	func parseTasks(completion: @escaping ([ToDo]) -> Void)
-
-	/// Loads tasks from a data source.
-	///
-	/// This method initiates the loading process and may notify other components when loading is complete.
-	func loadTasks()
-
-	/// Filters tasks based on the specified category.
-	///
-	/// - Parameter category: An instance of `Category` used to filter the tasks.
-	/// - Returns: An array of `ToDo` objects that belong to the specified category.
-	func filterTasks(by category: Category) -> [ToDo]
-}
-
 /// `Interactor` of the MainScreen with tasks
 final class MainScreenInteractor: MainScreenInteractorProtocol {
 	weak var presenter: MainScreenPresenter?

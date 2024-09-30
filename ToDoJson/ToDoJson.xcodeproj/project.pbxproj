@@ -228,11 +228,11 @@
 		A2BBAE982C93FDEF00F65ADA /* MainScreenModule */ = {
 			isa = PBXGroup;
 			children = (
+				DDCB757D2CA636CC00671699 /* MainScreenContract.swift */,
 				A2C28D482C968D11001D055C /* View */,
 				A2BBAE9C2C93FE4100F65ADA /* MainScreenInteractor.swift */,
 				A2BBAE9E2C93FE4700F65ADA /* MainScreenPresenter.swift */,
 				A2BBAEA22C93FE5900F65ADA /* MainScreenRouter.swift */,
-				DDCB757D2CA636CC00671699 /* MainScreenContract.swift */,
 				DD2FCB0E2CA519CB004E9222 /* Common */,
 			);
 			path = MainScreenModule;

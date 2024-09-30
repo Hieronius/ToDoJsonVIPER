@@ -1,51 +1,5 @@
 import UIKit
 
-/// Protocol that defines the interface for the View to communicate with the Presenter.
-///
-/// The `MainScreenViewInput` protocol is implemented by the View (e.g., `MainScreenViewController`)
-/// to receive updates from the Presenter. It provides methods for displaying tasks,
-/// filtered tasks, and updating UI elements based on selected categories.
-protocol MainScreenViewInput: AnyObject {
-	
-	/// Displays a list of tasks in the view.
-	///
-	/// - Parameter tasks: An array of `ToDo` objects representing tasks to be displayed.
-	func displayTasks(_ tasks: [ToDo])
-	
-	/// Displays a filtered list of tasks in the view.
-	///
-	/// - Parameter tasks: An array of `ToDo` objects representing the filtered tasks to be displayed.
-	func displayFilteredTasks(_ tasks: [ToDo])
-	
-	
-	/// Updates the UI to reflect the colors associated with the selected category.
-	///
-	/// - Parameter selectedCategory: The category that has been selected by the user,
-	/// which will determine how the UI elements are colored.
-	func updateCategoryColors(selectedCategory: Category)
-}
-
-/// Protocol that defines the interface for the View to communicate user actions to the Presenter.
-///
-/// The `MainScreenViewOutput` protocol is implemented by the Presenter (e.g., `MainScreenPresenter`)
-/// to handle user interactions from the View. It provides methods for responding to user actions
-/// such as creating new tasks, editing existing tasks, selecting categories, and handling view lifecycle events.
-protocol MainScreenViewOutput: AnyObject {
-	
-	/// Called when the user taps on the button to create a new task.
-	func newTaskButtonTapped()
-	
-	/// Called when a task needs to be edited.
-	///
-	/// - Parameter todo: The `ToDo` object representing the task that is to be edited.
-	func editTask(_ todo: ToDo)
-	
-	/// Called when a category is selected by the user.
-	///
-	/// - Parameter category: The `Category` object representing the category that has been selected.
-	func selectCategory(_ category: Category)
-}
-
 /// Controller for the `MainScreen`
 final class MainScreenViewController: GenericViewController<MainScreenView> {
 	
