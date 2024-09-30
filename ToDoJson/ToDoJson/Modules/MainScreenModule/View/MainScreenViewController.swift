@@ -41,18 +41,17 @@ extension MainScreenViewController {
 		
 		setupCategoryGestures()
 	}
-	
-	@objc
-	func moveToTaskScreen() {
+
+	/// Call `presenter` to move to the TaskScreen and create a new todo
+	@objc func moveToTaskScreen() {
 		presenter?.newTaskButtonTapped()
 	}
 }
 
-// MARK: - Adding gestures to the categories
+// MARK: - Making task's categories interactable
 
 private extension MainScreenViewController {
-	
-	/// Makes categories of the tasks clickable
+
 	func setupCategoryGestures() {
 		let allTapGesture = UITapGestureRecognizer(target: self, action: #selector(showAllTasks))
 		rootView.categoryAllSummeryStackView.addGestureRecognizer(allTapGesture)
@@ -125,7 +124,7 @@ extension MainScreenViewController {
 
 private extension MainScreenViewController {
 	
-	/// Methods adds `Delete` and `Edit` actions to the cells
+	/// Methods adds `Delete` and `Edit` actions to the cells by swipe gesture
 	func configureCollectionView() {
 		var config = UICollectionLayoutListConfiguration(appearance: .plain)
 		config.trailingSwipeActionsConfigurationProvider = { [unowned self] indexPath in
@@ -229,6 +228,7 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
 }
 
 // MARK: - MainScreenViewInput
+
 extension MainScreenViewController: MainScreenViewInput {
 	
 	/// Displays a list of tasks in the view.
