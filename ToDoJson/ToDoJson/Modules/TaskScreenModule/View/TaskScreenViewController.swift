@@ -1,17 +1,5 @@
 import UIKit
 
-/// Protocol that defines the interface for the View to communicate with the Presenter.
-///
-/// The `TaskScreenViewInput` protocol is implemented by the View (e.g., `TaskScreenViewController`)
-/// to receive updates from the Presenter. It provides methods for populating task details.
-protocol TaskScreenViewInput: AnyObject {
-
-	/// Populates the UI with task details for editing.
-	///
-	/// - Parameter task: The `ToDo` object representing the task to be displayed.
-	func populateFieldsIfEditing()
-}
-
 /// `Controller` of the TaskScreen
 final class TaskScreenViewController: GenericViewController<TaskScreenView> {
 

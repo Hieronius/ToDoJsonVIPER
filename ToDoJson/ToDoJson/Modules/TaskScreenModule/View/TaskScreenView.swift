@@ -1,6 +1,6 @@
 import UIKit
 
-/// RootView for the `TaskScreen`
+/// `RootView` for the TaskScreen
 final class TaskScreenView: UIView {
 	
 	// MARK: - Properties
