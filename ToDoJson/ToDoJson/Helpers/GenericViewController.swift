@@ -5,6 +5,7 @@ class GenericViewController<T: UIView>: UIViewController {
 
 	// MARK: - Public Properties
 
+	/// `rootView` to be used directly from ViewController
 	public var rootView: T {
 		return view as! T
 	}
