@@ -34,6 +34,7 @@ final class MainScreenViewController: GenericViewController<MainScreenView> {
 // MARK: - SetupBehaviour
 
 extension MainScreenViewController {
+
 	private func setupBehaviour() {
 		rootView.collectionView.delegate = self
 		
@@ -124,7 +125,7 @@ extension MainScreenViewController {
 
 private extension MainScreenViewController {
 	
-	/// Methods adds `Delete` and `Edit` actions to the cells by swipe gesture
+	/// Method adds `Delete` and `Edit` actions to the cells by swipe gesture
 	func configureCollectionView() {
 		var config = UICollectionLayoutListConfiguration(appearance: .plain)
 		config.trailingSwipeActionsConfigurationProvider = { [unowned self] indexPath in

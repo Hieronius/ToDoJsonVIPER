@@ -62,9 +62,9 @@ final class MainScreenView: UIView {
 
 // MARK: - Private Methods
 
-private extension MainScreenView {
+// MARK: - Embed Views
 
-	// MARK: - Embed Views
+private extension MainScreenView {
 
 	func embedViews() {
 
@@ -106,8 +106,11 @@ private extension MainScreenView {
 
 		collectionView.register(ToDoCell.self, forCellWithReuseIdentifier: ToDoCell.reuseIdentifier)
 	}
+}
 
-	// MARK: - Setup Appearance
+// MARK: - Setup Appearance
+
+private extension MainScreenView {
 
 	func setupAppearance() {
 		backgroundColor = .customBackgroundColor
@@ -149,8 +152,11 @@ private extension MainScreenView {
 		collectionView.backgroundColor = .clear
 		collectionView.showsVerticalScrollIndicator = false
 	}
+}
 
-	// MARK: - Setup Layout
+// MARK: - Setup Layout
+
+private extension MainScreenView {
 
 	func setupLayout() {
 		mainVerticalStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -173,8 +179,11 @@ private extension MainScreenView {
 			categoriesContainerView.heightAnchor.constraint(equalToConstant: 25)
 		])
 	}
+}
 
-	// MARK: - Setup Data
+// MARK: - Setup Data
+
+private extension MainScreenView {
 
 	func setupData() {
 		headerTitle.text = "Today's Task"
@@ -184,7 +193,7 @@ private extension MainScreenView {
 
 		headerSubTitle.text = currentDateFormatter.string(from: Date())
 		newTaskButton.setTitle("  + New Task  ", for: .normal)
-
+		
 		categoryAllNameLabel.text = "All"
 		categoryAllTaskCountLabel.text = "35"
 
