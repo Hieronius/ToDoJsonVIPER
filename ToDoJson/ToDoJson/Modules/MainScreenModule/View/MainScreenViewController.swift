@@ -195,7 +195,7 @@ extension MainScreenViewController {
 	}
 	
 	/// Apply changes on the screen when you use trailing swipe gesture on the cell
-	func applySnapshot(with tasks: [ToDo]) {
+	private func applySnapshot(with tasks: [ToDo]) {
 		var snapshot = NSDiffableDataSourceSnapshot<Int, ToDo>()
 		snapshot.appendSections([0])
 		snapshot.appendItems(tasks)
