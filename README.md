@@ -39,7 +39,7 @@ https://github.com/user-attachments/assets/026aec4e-e83e-44e7-9b50-fda8ce035845
 4. Fix the case when tasks title being crossed without being completed.
 5. Add Activity Indicator View for the time user might wait for tasks update in first app running.
 6. Refactor Input/Output protocols of the Views accordingly to VIPER.
-7. Put all protocols of the single module to the *ModuleNameContract file to improve readability and decrease code load of the entities.
+7. Put all protocols of the single module to the *ModuleNameContract file to improve readability and decrease code load of the entities ✅
 8. Implement the mechanic to load tasks from CoreData only once when user runs the app first time.
 9. Decouple MainScreenPresenter method viewDidLoad and call presenter from viewDidLoad of the MainScreenViewController
 10. Add a special private queue and context to work with CoreData
