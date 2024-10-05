@@ -22,6 +22,13 @@ protocol TaskScreenViewInput: AnyObject {
 /// to handle the creation and updating of tasks, as well as managing user and task ID information.
 protocol TaskScreenInteractorProtocol: AnyObject {
 
+	/// Initializes a new instance of the interactor with the specified dependencies.
+		///
+		/// - Parameters:
+		///   - userManager: An instance of `UserManager` used for managing user data and actions.
+		///   - taskIDManager: An instance of `TaskIDManager` used for managing task IDs.
+		init(userManager: UserManagerProtocol, taskIDManager: TaskIDManagerProtocol)
+
 	/// Creates a new task with the specified details.
 	///
 	/// - Parameters:
@@ -35,16 +42,6 @@ protocol TaskScreenInteractorProtocol: AnyObject {
 	///
 	/// - Parameter task: The `ToDo` object representing the task to be updated.
 	func updateTask(_ task: ToDo)
-
-	/// Sets the user manager responsible for handling user-related operations.
-	///
-	/// - Parameter userManager: An instance of `UserManager` used for managing user data and actions.
-	func setUserManager(_ userManager: UserManager)
-
-	/// Sets the task ID manager responsible for generating or managing unique task identifiers.
-	///
-	/// - Parameter taskIDManager: An instance of `TaskIDManager` used for managing task IDs.
-	func setTaskIDManager(_ taskIDManager: TaskIDManager)
 }
 
 // MARK: - TaskScreenPresenterProtocol

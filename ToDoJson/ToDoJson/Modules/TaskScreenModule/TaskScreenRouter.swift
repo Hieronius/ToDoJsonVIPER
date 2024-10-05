@@ -10,9 +10,6 @@ final class TaskScreenRouter: TaskScreenRouterProtocol {
 		let interactor = TaskScreenInteractor()
 		let router = TaskScreenRouter()
 		
-		interactor.setUserManager(UserManager.shared)
-		interactor.setTaskIDManager(TaskIDManager.shared)
-		
 		view.presenter = presenter
 		view.task = task
 		presenter.view = view

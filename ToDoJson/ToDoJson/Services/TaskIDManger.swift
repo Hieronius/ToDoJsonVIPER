@@ -1,7 +1,7 @@
 import Foundation
 
 /// Protocol to define a manager which creates a unique ID's for any new User's tasks
-protocol TaskIDManagerProtocol {
+protocol TaskIDManagerProtocol: AnyObject {
 
 	/// A number to start from in generating unique id's
 	var lastUsedID: Int { get }
