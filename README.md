@@ -57,5 +57,6 @@ https://github.com/user-attachments/assets/026aec4e-e83e-44e7-9b50-fda8ce035845
 22. Find the way to implement swipe actions on cells with custom spacing between them via CollectionView + DiffableDataSource
 23. Cut View's into logical pieces by extensions: setupLayout, setupApperance and so on.
 24. Provide custom enum with CoreData/URLSession errors with localization and description for better user experience and error handling
+25. Add documentation for app files structure and logic layers
 
 
