@@ -31,11 +31,140 @@ final class MainScreenViewController: GenericViewController<MainScreenView> {
 	}
 }
 
-// MARK: - SetupBehaviour
+// MARK: - Public Methods
+
+// MARK: - Categories Filtering Logic
 
 extension MainScreenViewController {
 
-	private func setupBehaviour() {
+	/// Called to display all tasks.
+	@objc func showAllTasks() {
+		presenter?.selectCategory(.all)
+	}
+
+	/// Called to display only completed tasks.
+	@objc func showCompletedTasks() {
+		presenter?.selectCategory(.completed)
+	}
+
+	/// Called to display only uncompleted tasks.
+	@objc func showUncompletedTasks() {
+		presenter?.selectCategory(.uncompleted)
+	}
+
+	/// Updates the task count labels for each category in the UI.
+	func updateCategoryTaskCounts() {
+		rootView.categoryAllTaskCountLabel.text = "\(allTasks.count)"
+		rootView.categoryOpenTaskCountLabel.text = "\(allTasks.filter { !$0.completed }.count)"
+		rootView.categoryClosedTaskCountLabel.text = "\(allTasks.filter { $0.completed }.count)"
+	}
+
+	/// Highlights the selected category of tasks by updating label colors.
+	func updateCategoryColors(selectedCategory: Category) {
+		switch selectedCategory {
+		case .all:
+			rootView.categoryAllNameLabel.textColor = .blue
+			rootView.categoryAllTaskCountLabel.textColor = .blue
+			rootView.categoryOpenNameLabel.textColor = .gray
+			rootView.categoryOpenTaskCountLabel.textColor = .gray
+			rootView.categoryClosedNameLabel.textColor = .gray
+			rootView.categoryClosedTaskCountLabel.textColor = .gray
+
+		case .uncompleted:
+			rootView.categoryAllNameLabel.textColor = .gray
+			rootView.categoryAllTaskCountLabel.textColor = .gray
+			rootView.categoryOpenNameLabel.textColor = .blue
+			rootView.categoryOpenTaskCountLabel.textColor = .blue
+			rootView.categoryClosedNameLabel.textColor = .gray
+			rootView.categoryClosedTaskCountLabel.textColor = .gray
+
+		case .completed:
+			rootView.categoryAllNameLabel.textColor = .gray
+			rootView.categoryAllTaskCountLabel.textColor = .gray
+			rootView.categoryOpenNameLabel.textColor = .gray
+			rootView.categoryOpenTaskCountLabel.textColor = .gray
+			rootView.categoryClosedNameLabel.textColor = .blue
+			rootView.categoryClosedTaskCountLabel.textColor = .blue
+		}
+	}
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
+
+	/// Called when a user selects an item in the collection view.
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		if allTasks[indexPath.item].completed {
+			allTasks[indexPath.item].completed = false
+		} else if !allTasks[indexPath.item].completed {
+			allTasks[indexPath.item].completed = true
+		}
+		updateSnapshot()
+		updateCategoryTaskCounts()
+		ToDoDataManager.shared.updateToDo(allTasks[indexPath.item])
+	}
+
+	/// Returns the size for each item in the collection view.
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: collectionView.bounds.width - 20, height: 300)
+	}
+}
+
+// MARK: - MainScreenViewInput
+
+extension MainScreenViewController: MainScreenViewInput {
+
+	/// Displays a list of tasks in the view.
+	///
+	/// - Parameter tasks: An array of `ToDo` objects representing the tasks to be displayed.
+	func displayTasks(_ tasks: [ToDo]) {
+		allTasks = tasks
+		applySnapshot(with: tasks)
+		updateCategoryTaskCounts()
+	}
+
+	/// Displays a filtered list of tasks in the view.
+	///
+	/// - Parameter tasks: An array of `ToDo` objects representing the filtered tasks to be displayed.
+	func displayFilteredTasks(_ tasks: [ToDo]) {
+		filteredTasks = tasks
+		applySnapshot(with: tasks)
+		updateCategoryTaskCounts()
+	}
+}
+
+// MARK: - MainScreenViewOutput
+
+extension MainScreenViewController: MainScreenViewOutput {
+
+	/// Called when the user taps the button to create a new task.
+	func newTaskButtonTapped() {
+		presenter?.newTaskButtonTapped() // Call method on presenter
+	}
+
+	/// Called when a task needs to be edited.
+	///
+	/// - Parameter todo: The `ToDo` object representing the task that is to be edited.
+	func editTask(_ todo: ToDo) {
+		presenter?.editTask(todo) // Call method on presenter to edit task
+	}
+
+	/// Called when a category of the tasks is selected by the user.
+	///
+	/// - Parameter category: The `Category` object representing the selected category.
+	func selectCategory(_ category: Category) {
+		presenter?.selectCategory(category) // Call method on presenter to select category
+	}
+}
+
+// MARK: - Private Methods
+
+// MARK: - SetupBehaviour
+
+private extension MainScreenViewController {
+
+	func setupBehaviour() {
 		rootView.collectionView.delegate = self
 		
 		rootView.newTaskButton.addTarget(self, action: #selector(moveToTaskScreen), for: .touchUpInside)
@@ -43,7 +172,6 @@ extension MainScreenViewController {
 		setupCategoryGestures()
 	}
 
-	/// Call `presenter` to move to the TaskScreen and create a new todo
 	@objc func moveToTaskScreen() {
 		presenter?.newTaskButtonTapped()
 	}
@@ -62,62 +190,6 @@ private extension MainScreenViewController {
 		
 		let closedTapGesture = UITapGestureRecognizer(target: self, action: #selector(showCompletedTasks))
 		rootView.categoryClosedSummeryStackView.addGestureRecognizer(closedTapGesture)
-	}
-}
-
-// MARK: - Categories Filtering Logic
-
-extension MainScreenViewController {
-	
-	/// Called to display all tasks.
-	@objc func showAllTasks() {
-		presenter?.selectCategory(.all)
-	}
-	
-	/// Called to display only completed tasks.
-	@objc func showCompletedTasks() {
-		presenter?.selectCategory(.completed)
-	}
-	
-	/// Called to display only uncompleted tasks.
-	@objc func showUncompletedTasks() {
-		presenter?.selectCategory(.uncompleted)
-	}
-	
-	/// Updates the task count labels for each category in the UI.
-	func updateCategoryTaskCounts() {
-		rootView.categoryAllTaskCountLabel.text = "\(allTasks.count)"
-		rootView.categoryOpenTaskCountLabel.text = "\(allTasks.filter { !$0.completed }.count)"
-		rootView.categoryClosedTaskCountLabel.text = "\(allTasks.filter { $0.completed }.count)"
-	}
-	
-	/// Highlights the selected category of tasks by updating label colors.
-	func updateCategoryColors(selectedCategory: Category) {
-		switch selectedCategory {
-		case .all:
-			rootView.categoryAllNameLabel.textColor = .blue
-			rootView.categoryAllTaskCountLabel.textColor = .blue
-			rootView.categoryOpenNameLabel.textColor = .gray
-			rootView.categoryOpenTaskCountLabel.textColor = .gray
-			rootView.categoryClosedNameLabel.textColor = .gray
-			rootView.categoryClosedTaskCountLabel.textColor = .gray
-			
-		case .uncompleted:
-			rootView.categoryAllNameLabel.textColor = .gray
-			rootView.categoryAllTaskCountLabel.textColor = .gray
-			rootView.categoryOpenNameLabel.textColor = .blue
-			rootView.categoryOpenTaskCountLabel.textColor = .blue
-			rootView.categoryClosedNameLabel.textColor = .gray
-			rootView.categoryClosedTaskCountLabel.textColor = .gray
-			
-		case .completed:
-			rootView.categoryAllNameLabel.textColor = .gray
-			rootView.categoryAllTaskCountLabel.textColor = .gray
-			rootView.categoryOpenNameLabel.textColor = .gray
-			rootView.categoryOpenTaskCountLabel.textColor = .gray
-			rootView.categoryClosedNameLabel.textColor = .blue
-			rootView.categoryClosedTaskCountLabel.textColor = .blue
-		}
 	}
 }
 
@@ -170,9 +242,9 @@ private extension MainScreenViewController {
 
 // MARK: - Setup DiffableDataSource
 
-extension MainScreenViewController {
+private extension MainScreenViewController {
 	
-	private func configureDataSource() {
+	func configureDataSource() {
 		dataSource = UICollectionViewDiffableDataSource<Int, ToDo>(collectionView: rootView.collectionView) { (collectionView, indexPath, todo) -> UICollectionViewCell? in
 			guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ToDoCell.reuseIdentifier, for: indexPath) as? ToDoCell else {
 				fatalError("Cannot create new cell")
@@ -182,7 +254,7 @@ extension MainScreenViewController {
 		}
 	}
 	
-	private func updateSnapshot() {
+	func updateSnapshot() {
 		var snapshot = NSDiffableDataSourceSnapshot<Int, ToDo>()
 		snapshot.appendSections([0])
 		snapshot.appendItems(allTasks)
@@ -193,9 +265,8 @@ extension MainScreenViewController {
 		
 		updateCategoryTaskCounts()
 	}
-	
-	/// Apply changes on the screen when you use trailing swipe gesture on the cell
-	private func applySnapshot(with tasks: [ToDo]) {
+
+	func applySnapshot(with tasks: [ToDo]) {
 		var snapshot = NSDiffableDataSourceSnapshot<Int, ToDo>()
 		snapshot.appendSections([0])
 		snapshot.appendItems(tasks)
@@ -203,74 +274,5 @@ extension MainScreenViewController {
 		guard let dataSource else { return }
 
 		dataSource.apply(snapshot, animatingDifferences: true)
-	}
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-
-extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
-	
-	/// Called when a user selects an item in the collection view.
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		if allTasks[indexPath.item].completed {
-			allTasks[indexPath.item].completed = false
-		} else if !allTasks[indexPath.item].completed {
-			allTasks[indexPath.item].completed = true
-		}
-		updateSnapshot()
-		updateCategoryTaskCounts()
-		ToDoDataManager.shared.updateToDo(allTasks[indexPath.item])
-	}
-	
-	/// Returns the size for each item in the collection view.
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: collectionView.bounds.width - 20, height: 300)
-	}
-}
-
-// MARK: - MainScreenViewInput
-
-extension MainScreenViewController: MainScreenViewInput {
-	
-	/// Displays a list of tasks in the view.
-	///
-	/// - Parameter tasks: An array of `ToDo` objects representing the tasks to be displayed.
-	func displayTasks(_ tasks: [ToDo]) {
-		allTasks = tasks
-		applySnapshot(with: tasks)
-		updateCategoryTaskCounts()
-	}
-	
-	/// Displays a filtered list of tasks in the view.
-	///
-	/// - Parameter tasks: An array of `ToDo` objects representing the filtered tasks to be displayed.
-	func displayFilteredTasks(_ tasks: [ToDo]) {
-		filteredTasks = tasks
-		applySnapshot(with: tasks)
-		updateCategoryTaskCounts()
-	}
-}
-
-// MARK: - MainScreenViewOutput
-
-extension MainScreenViewController: MainScreenViewOutput {
-	
-	/// Called when the user taps the button to create a new task.
-	func newTaskButtonTapped() {
-		presenter?.newTaskButtonTapped() // Call method on presenter
-	}
-	
-	/// Called when a task needs to be edited.
-	///
-	/// - Parameter todo: The `ToDo` object representing the task that is to be edited.
-	func editTask(_ todo: ToDo) {
-		presenter?.editTask(todo) // Call method on presenter to edit task
-	}
-	
-	/// Called when a category of the tasks is selected by the user.
-	///
-	/// - Parameter category: The `Category` object representing the selected category.
-	func selectCategory(_ category: Category) {
-		presenter?.selectCategory(category) // Call method on presenter to select category
 	}
 }
