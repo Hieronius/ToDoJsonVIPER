@@ -43,10 +43,52 @@ final class ToDoCell: UICollectionViewCell {
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
+}
 
-	// MARK: - Private Methods
+// MARK: - Public Methods
 
-	private func embedViews() {
+// MARK: - Configure Cell
+
+extension ToDoCell {
+
+	/// Method to populate each cell with `ToDo`s data
+	func configure(with todo: ToDo) {
+		titleLabel.text = todo.todo
+
+		if todo.completed {
+			let attributedString = NSAttributedString(string: todo.todo, attributes: [
+				.strikethroughStyle: NSUnderlineStyle.single.rawValue,
+				.foregroundColor: UIColor.black
+			])
+			titleLabel.attributedText = attributedString
+		} else if !todo.completed {
+			titleLabel.attributedText = NSAttributedString(string: todo.todo)
+		}
+		descriptionLabel.text = todo.taskDescription ?? ""
+
+		let deadlineFormatter = DateFormatter()
+		deadlineFormatter.dateStyle = .medium
+
+		deadlineLabel.text = todo.deadline != nil ? deadlineFormatter.string(from: todo.deadline ?? Date()) : "No deadline"
+
+		let dateCreationFormatter = DateFormatter()
+		dateCreationFormatter.dateStyle = .short
+
+		creationDateLabel.text = todo.creationDate != nil ? dateCreationFormatter.string(from: todo.creationDate ?? Date()) : "Today"
+
+		let imageName = todo.completed ? "checkmark.circle.fill" : "circle"
+
+		checkboxImageView.image = UIImage(systemName: imageName)
+	}
+}
+
+// MARK: - Private Methods
+
+// MARK: - EmbedViews
+
+private extension ToDoCell {
+
+	func embedViews() {
 		contentView.addSubview(horizontalStackView)
 		contentView.addSubview(bottomSpacerSeparator)
 		contentView.addSubview(topSpacerSeparator)
@@ -66,8 +108,13 @@ final class ToDoCell: UICollectionViewCell {
 		horizontalStackView.addArrangedSubview(verticalStackView)
 		horizontalStackView.addArrangedSubview(checkboxImageView)
 	}
+}
 
-	private func setupAppearance() {
+// MARK: - SetupAppearance
+
+private extension ToDoCell {
+
+	func setupAppearance() {
 		titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
 		titleLabel.numberOfLines = 0
 
@@ -101,6 +148,11 @@ final class ToDoCell: UICollectionViewCell {
 		bottomSpacerSeparator.backgroundColor = .customBackgroundColor
 		topSpacerSeparator.backgroundColor = .customBackgroundColor
 	}
+}
+
+// MARK: - SetupLayout
+
+private extension ToDoCell {
 
 	private func setupLayout() {
 		horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -130,34 +182,5 @@ final class ToDoCell: UICollectionViewCell {
 
 			checkboxImageView.widthAnchor.constraint(equalToConstant: 24)
 		])
-	}
-
-	func configure(with todo: ToDo) {
-		titleLabel.text = todo.todo
-
-		if todo.completed {
-			let attributedString = NSAttributedString(string: todo.todo, attributes: [
-				.strikethroughStyle: NSUnderlineStyle.single.rawValue,
-				.foregroundColor: UIColor.black
-			])
-			titleLabel.attributedText = attributedString
-		} else if !todo.completed {
-			titleLabel.attributedText = NSAttributedString(string: todo.todo)
-		}
-		descriptionLabel.text = todo.taskDescription ?? ""
-
-		let deadlineFormatter = DateFormatter()
-		deadlineFormatter.dateStyle = .medium
-
-		deadlineLabel.text = todo.deadline != nil ? deadlineFormatter.string(from: todo.deadline ?? Date()) : "No deadline"
-		
-		let dateCreationFormatter = DateFormatter()
-		dateCreationFormatter.dateStyle = .short
-
-		creationDateLabel.text = todo.creationDate != nil ? dateCreationFormatter.string(from: todo.creationDate ?? Date()) : "Today"
-
-		let imageName = todo.completed ? "checkmark.circle.fill" : "circle"
-
-		checkboxImageView.image = UIImage(systemName: imageName)
 	}
 }
