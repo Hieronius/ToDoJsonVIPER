@@ -58,5 +58,7 @@ https://github.com/user-attachments/assets/026aec4e-e83e-44e7-9b50-fda8ce035845
 23. Cut View's into logical pieces by extensions: setupLayout, setupApperance and so on.
 24. Provide custom enum with CoreData/URLSession errors with localization and description for better user experience and error handling
 25. Add documentation for app files structure and logic layers
+26. Consider to placing service's and manager's protocols to the separate file at the same folder for better clarity and flexibility
+27. Consider to placing Domain, Presentation and Data layers of the app to it's separate App Targets for better separation of concerns and modularity
 
 
