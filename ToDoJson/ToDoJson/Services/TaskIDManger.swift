@@ -3,6 +3,9 @@ import Foundation
 /// Protocol to define a manager which creates a unique ID's for any new User's tasks
 protocol TaskIDManagerProtocol: AnyObject {
 
+	/// Static property to identify entity as as `singleton` class
+	static var shared: Self { get }
+
 	/// A number to start from in generating unique id's
 	var lastUsedID: Int { get }
 

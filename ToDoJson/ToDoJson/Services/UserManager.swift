@@ -3,6 +3,9 @@ import Foundation
 /// Protocol to define the behaviour of UserManager service in the app
 protocol UserManagerProtocol: AnyObject {
 
+	/// Static property to identify entity as as `singleton` class
+	static var shared: Self { get }
+
 	/// Unique user identifier
 	var userId: Int? { get }
 
@@ -13,7 +16,7 @@ protocol UserManagerProtocol: AnyObject {
 /// Manager to generate a unique user id when app launches in first time or to return an existing one
 final class UserManager: UserManagerProtocol {
 
-	/// Singleton property of UserManager for single state access from any parts of the app
+	/// `Singleton` property of UserManager for single state access from any parts of the app
 	static let shared = UserManager()
 
 	/// Unique userId which should be generated in first running of the app
