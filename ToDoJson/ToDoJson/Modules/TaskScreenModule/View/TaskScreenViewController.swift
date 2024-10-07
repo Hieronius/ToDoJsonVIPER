@@ -20,6 +20,21 @@ final class TaskScreenViewController: GenericViewController<TaskScreenView> {
 	}
 }
 
+// MARK: - Public Methods
+
+// MARK: - TaskScreenViewInput
+
+extension TaskScreenViewController: TaskScreenViewInput {
+
+	/// Method pass the data from an existing todo to the editing screen
+	func populateFieldsIfEditing() {
+		guard let task else { return }
+		rootView.taskTitleTextField.text = task.todo
+		rootView.taskDescriptionTextField.text = task.taskDescription
+		rootView.deadlineDatePicker.date = task.deadline ?? Date()
+	}
+}
+
 // MARK: - Private Methods
 
 // MARK: - SetupBehaviour
@@ -41,18 +56,5 @@ private extension TaskScreenViewController {
 
 			presenter?.saveTask(title: title, description: description, deadline: deadline, creationDate: Date())
 		}
-	}
-}
-
-// MARK: - TaskScreenViewInput
-
-extension TaskScreenViewController: TaskScreenViewInput {
-
-	/// Method pass the data from an existing todo to the editing screen
-	func populateFieldsIfEditing() {
-		guard let task else { return }
-		rootView.taskTitleTextField.text = task.todo
-		rootView.taskDescriptionTextField.text = task.taskDescription
-		rootView.deadlineDatePicker.date = task.deadline ?? Date()
 	}
 }
