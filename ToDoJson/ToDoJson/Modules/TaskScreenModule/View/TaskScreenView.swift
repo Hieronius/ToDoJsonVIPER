@@ -13,12 +13,16 @@ final class TaskScreenView: UIView {
 	private let taskTitleHorizontalStackView = UIStackView()
 	private let taskTitleVerticalStackView = UIStackView()
 	private let taskTitleLabel = UILabel()
+
+	/// Field to write an actual task to accomplish
 	let taskTitleTextField = UITextField()
 	
 	// MARK: Task Description Section
 	
 	private let topSpacer = UIView()
 	private let taskDescriptionLabel = UILabel()
+
+	/// Field to write a description of the task
 	let taskDescriptionTextField = UITextField()
 	
 	// MARK: Deadline Section
@@ -27,11 +31,12 @@ final class TaskScreenView: UIView {
 	private let deadlineContainerView = UIView()
 	private let deadlineHorizontalStackView = UIStackView()
 	private let deadlineLabel = UILabel()
+
+	/// Field to choose the date of task's deadline
 	let deadlineDatePicker = UIDatePicker()
 	private let bottomSpacer = UIView()
-	
-	// MARK: Done Button
-	
+
+	/// Button to end the editing of the task
 	let doneButton = UIButton()
 	
 	// MARK: - Initialization
@@ -77,9 +82,13 @@ private extension TaskScreenView {
 		deadlineHorizontalStackView.addArrangedSubview(deadlineLabel)
 		deadlineHorizontalStackView.addArrangedSubview(deadlineDatePicker)
 	}
-	
-	// MARK: - Setup Appearance
-	
+
+}
+
+// MARK: - Setup Appearance
+
+private extension TaskScreenView {
+
 	func setupAppearance() {
 		backgroundColor = .customBackgroundColor
 		
@@ -118,8 +127,11 @@ private extension TaskScreenView {
 		doneButton.layer.masksToBounds = true
 		doneButton.backgroundColor = UIColor.blue.withAlphaComponent(0.1)
 	}
-	
-	// MARK: - Setup Layout
+}
+
+// MARK: - Setup Layout
+
+private extension TaskScreenView {
 	
 	func setupLayout() {
 		mainVerticalStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -151,6 +163,11 @@ private extension TaskScreenView {
 			doneButton.trailingAnchor.constraint(equalTo: mainVerticalStackView.trailingAnchor),
 		])
 	}
+}
+
+// MARK: - Setup Data
+
+private extension TaskScreenView {
 	
 	func setupData() {
 		taskTitleLabel.text = "Task Title"
