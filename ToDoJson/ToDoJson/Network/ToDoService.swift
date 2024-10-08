@@ -1,11 +1,22 @@
 import Foundation
 
+/// Protocol to define a behaviour of the service that supposed to fetch and handle data from the server
+protocol ToDoServiceProtocol {
+
+	/// An address to fetch data from
+	var urlString: String { get }
+
+	/// Fetches tasks from a remote source.
+	func fetchTasks(completion: @escaping (Result<[ToDo], Error>) -> Void)
+}
+
 /// A special service to handle and fetch and get `Tasks` from JSON file
-final class ToDoService {
+final class ToDoService: ToDoServiceProtocol {
 
 	// MARK: - Private Properties
 
-	private let urlString = "https://dummyjson.com/todos"
+	/// An address to fetch data from
+	let urlString = "https://dummyjson.com/todos"
 
 	// MARK: - Public Methods
 
