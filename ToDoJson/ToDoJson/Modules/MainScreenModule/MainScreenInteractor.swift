@@ -13,14 +13,14 @@ final class MainScreenInteractor: MainScreenInteractorProtocol {
 
 	// MARK: - Private Properties
 
-	private let todoService: ToDoService
+	private let todoService: ToDoServiceProtocol
 
 	// MARK: - Initialization
 
 	/// Initializes the interactor with a given `ToDoService`.
 	///
 	/// - Parameter todoService: An instance of `ToDoService` used for fetching tasks.
-	init(todoService: ToDoService) {
+	init(todoService: ToDoServiceProtocol) {
 		self.todoService = todoService
 	}
 
