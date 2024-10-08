@@ -60,5 +60,6 @@ https://github.com/user-attachments/assets/026aec4e-e83e-44e7-9b50-fda8ce035845
 25. Add documentation for app files structure and logic layers
 26. Consider to placing service's and manager's protocols to the separate file at the same folder for better clarity and flexibility
 27. Consider to placing Domain, Presentation and Data layers of the app to it's separate App Targets for better separation of concerns and modularity
+28. Refactor Router's method "buildModule" to be able to accept protocols of the VIPER's module components instead of hardcoding it's initialization inside the method
 
 
