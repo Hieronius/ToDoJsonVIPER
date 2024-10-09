@@ -41,7 +41,8 @@ final class MainScreenView: UIView {
 	// MARK: Tasks
 
 	/// `CollectionView` to display the list of tasks
-	let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+	let collectionView = UICollectionView(frame: .zero,
+										  collectionViewLayout: UICollectionViewFlowLayout())
 
 
 	// MARK: - Initialization
