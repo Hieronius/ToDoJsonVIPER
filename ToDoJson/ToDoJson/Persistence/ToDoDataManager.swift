@@ -1,13 +1,16 @@
 import CoreData
 
-protocol ToDoDataManagerProtocol {
+protocol ToDoDataManagerProtocol: AnyObject {
+
+	/// Static property to identify entity as as `singleton` class
+	static var shared: Self { get }
 	func fetchAllToDos() -> [ToDo]
 	func fetchAllToDosByCreationDate() -> [ToDo]
 	func createToDoMO(_ todo: ToDo)
 }
 
 /// App Data Storage Manager
-class ToDoDataManager: ToDoDataManagerProtocol {
+final class ToDoDataManager: ToDoDataManagerProtocol {
 
 	// MARK: Public Properties
 
