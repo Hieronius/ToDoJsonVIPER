@@ -4,6 +4,8 @@ protocol ToDoDataManagerProtocol: AnyObject {
 
 	/// Static property to identify entity as as `singleton` class
 	static var shared: Self { get }
+
+	/// Method to get all `ToDo`s from the CoreData storage
 	func fetchAllToDos() -> [ToDo]
 	func fetchAllToDosByCreationDate() -> [ToDo]
 	func createToDoMO(_ todo: ToDo)
