@@ -7,6 +7,8 @@ protocol ToDoDataManagerProtocol: AnyObject {
 
 	/// Method to get all `ToDo`s from the CoreData storage
 	func fetchAllToDos() -> [ToDo]
+
+	/// Method to get all `ToDo`s from the CoreData in sorted order by date of it's creation
 	func fetchAllToDosByCreationDate() -> [ToDo]
 	func createToDoMO(_ todo: ToDo)
 }
