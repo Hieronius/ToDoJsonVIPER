@@ -1,5 +1,6 @@
 import CoreData
 
+/// Protocol for CoreDataManager implementation in the app
 protocol ToDoDataManagerProtocol: AnyObject {
 
 	/// Static property to identify entity as as `singleton` class
