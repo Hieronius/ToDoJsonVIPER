@@ -30,6 +30,7 @@
 		A2D7C82C2C996C690038DC93 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7C82B2C996C690038DC93 /* UIColor+CustomColor.swift */; };
 		A2FB18782C951C7000B5D2FD /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FB18772C951C7000B5D2FD /* PersistentContainer.swift */; };
 		A2FB187A2C951FF400B5D2FD /* ToDoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FB18792C951FF400B5D2FD /* ToDoDataManager.swift */; };
+		DD22996C2CC096AF00CABD3A /* UIView+AutoresizingMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22996B2CC096AF00CABD3A /* UIView+AutoresizingMask.swift */; };
 		DD2FCAF32CA4FE00004E9222 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCAF22CA4FE00004E9222 /* UserManager.swift */; };
 		DD2FCAF52CA4FE27004E9222 /* TaskIDManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCAF42CA4FE27004E9222 /* TaskIDManger.swift */; };
 		DD2FCB052CA50D57004E9222 /* MainScreenViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2FCB042CA50D57004E9222 /* MainScreenViewControllerTests.swift */; };
@@ -98,6 +99,7 @@
 		A2D7C82B2C996C690038DC93 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		A2FB18772C951C7000B5D2FD /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		A2FB18792C951FF400B5D2FD /* ToDoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDataManager.swift; sourceTree = "<group>"; };
+		DD22996B2CC096AF00CABD3A /* UIView+AutoresizingMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoresizingMask.swift"; sourceTree = "<group>"; };
 		DD2FCAF22CA4FE00004E9222 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		DD2FCAF42CA4FE27004E9222 /* TaskIDManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskIDManger.swift; sourceTree = "<group>"; };
 		DD2FCAFA2CA50C9E004E9222 /* ToDoJsonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoJsonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 			children = (
 				A2BBAE702C93E0A600F65ADA /* GenericViewController.swift */,
 				A2D7C82B2C996C690038DC93 /* UIColor+CustomColor.swift */,
+				DD22996B2CC096AF00CABD3A /* UIView+AutoresizingMask.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				A2B29B8C2C93C49500986359 /* AppDelegate.swift in Sources */,
 				A2D7C8202C9967010038DC93 /* TaskScreenViewController.swift in Sources */,
 				A2A319CB2C951797001E2B66 /* ToDoDataModel.xcdatamodeld in Sources */,
+				DD22996C2CC096AF00CABD3A /* UIView+AutoresizingMask.swift in Sources */,
 				DD2FCAF52CA4FE27004E9222 /* TaskIDManger.swift in Sources */,
 				A2D7C8242C9967150038DC93 /* TaskScreenInteractor.swift in Sources */,
 				A2FB187A2C951FF400B5D2FD /* ToDoDataManager.swift in Sources */,
