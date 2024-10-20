@@ -160,15 +160,18 @@ private extension MainScreenView {
 private extension MainScreenView {
 
 	func setupLayout() {
-		mainVerticalStackView.translatesAutoresizingMaskIntoConstraints = false
 
-		headerVerticalStackView.translatesAutoresizingMaskIntoConstraints = false
-		headerHorizontalStackView.translatesAutoresizingMaskIntoConstraints = false
+		disableAutoresizingMask([
+			mainVerticalStackView,
 
-		categoriesHorizontalStackView.translatesAutoresizingMaskIntoConstraints = false
-		categoryAllSummeryStackView.translatesAutoresizingMaskIntoConstraints = false
-		categoryOpenSummeryStackView.translatesAutoresizingMaskIntoConstraints = false
-		categoryClosedSummeryStackView.translatesAutoresizingMaskIntoConstraints = false
+			headerVerticalStackView,
+			headerHorizontalStackView,
+
+			categoriesHorizontalStackView,
+			categoryAllSummeryStackView,
+			categoryOpenSummeryStackView,
+			categoryClosedSummeryStackView
+		])
 
 		NSLayoutConstraint.activate([
 			mainVerticalStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
