@@ -162,6 +162,7 @@ private extension MainScreenView {
 	func setupLayout() {
 
 		disableAutoresizingMask([
+
 			mainVerticalStackView,
 
 			headerVerticalStackView,
@@ -171,6 +172,7 @@ private extension MainScreenView {
 			categoryAllSummeryStackView,
 			categoryOpenSummeryStackView,
 			categoryClosedSummeryStackView
+
 		])
 
 		NSLayoutConstraint.activate([
