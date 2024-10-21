@@ -134,9 +134,14 @@ private extension TaskScreenView {
 private extension TaskScreenView {
 	
 	func setupLayout() {
-		mainVerticalStackView.translatesAutoresizingMaskIntoConstraints = false
-		taskTitleHorizontalStackView.translatesAutoresizingMaskIntoConstraints = false
-		deadlineHorizontalStackView.translatesAutoresizingMaskIntoConstraints = false
+
+		disableAutoresizingMask([
+
+		mainVerticalStackView,
+		taskTitleHorizontalStackView,
+		deadlineHorizontalStackView
+
+		])
 		
 		NSLayoutConstraint.activate([
 			mainVerticalStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
