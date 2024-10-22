@@ -155,9 +155,14 @@ private extension ToDoCell {
 private extension ToDoCell {
 
 	private func setupLayout() {
-		horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
-		bottomSpacerSeparator.translatesAutoresizingMaskIntoConstraints = false
-		topSpacerSeparator.translatesAutoresizingMaskIntoConstraints = false
+
+		disableAutoresizingMask([
+
+		horizontalStackView,
+		bottomSpacerSeparator,
+		topSpacerSeparator
+
+		])
 
 		NSLayoutConstraint.activate([
 
