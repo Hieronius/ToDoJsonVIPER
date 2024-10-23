@@ -106,7 +106,9 @@ extension MainScreenViewController: UICollectionViewDelegateFlowLayout {
 	}
 
 	/// Returns the size for each item in the collection view.
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+	func collectionView(_ collectionView: UICollectionView,
+						layout collectionViewLayout: UICollectionViewLayout,
+						sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: collectionView.bounds.width - 20, height: 300)
 	}
 }
