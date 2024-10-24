@@ -172,7 +172,6 @@ private extension MainScreenView {
 			categoryAllSummeryStackView,
 			categoryOpenSummeryStackView,
 			categoryClosedSummeryStackView
-
 		])
 
 		NSLayoutConstraint.activate([

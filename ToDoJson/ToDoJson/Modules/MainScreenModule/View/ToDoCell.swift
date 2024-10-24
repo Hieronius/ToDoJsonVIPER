@@ -161,7 +161,6 @@ private extension ToDoCell {
 		horizontalStackView,
 		bottomSpacerSeparator,
 		topSpacerSeparator
-
 		])
 
 		NSLayoutConstraint.activate([
