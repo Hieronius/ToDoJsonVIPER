@@ -89,9 +89,13 @@ extension ToDoCell {
 private extension ToDoCell {
 
 	func embedViews() {
-		contentView.addSubview(horizontalStackView)
-		contentView.addSubview(bottomSpacerSeparator)
-		contentView.addSubview(topSpacerSeparator)
+
+		contentView.addSubviews([
+
+			horizontalStackView,
+			bottomSpacerSeparator,
+			topSpacerSeparator
+		])
 
 		verticalStackView.addArrangedSubview(titleLabel)
 		verticalStackView.addArrangedSubview(descriptionLabel)
