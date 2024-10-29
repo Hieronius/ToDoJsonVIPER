@@ -71,9 +71,12 @@ private extension MainScreenView {
 
 		addSubview(mainVerticalStackView)
 
-		mainVerticalStackView.addArrangedSubview(headerContainerView)
-		mainVerticalStackView.addArrangedSubview(categoriesContainerView)
-		mainVerticalStackView.addArrangedSubview(collectionView)
+		mainVerticalStackView.addArrangedSubviews([
+
+			headerContainerView,
+			categoriesContainerView,
+			collectionView
+		])
 
 		// MARK: Header
 
