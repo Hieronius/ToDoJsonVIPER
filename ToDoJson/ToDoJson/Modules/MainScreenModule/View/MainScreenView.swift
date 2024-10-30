@@ -82,9 +82,12 @@ private extension MainScreenView {
 
 		headerContainerView.addSubview(headerHorizontalStackView)
 
-		headerHorizontalStackView.addArrangedSubview(headerVerticalStackView)
-		headerHorizontalStackView.addArrangedSubview(spacer)
-		headerHorizontalStackView.addArrangedSubview(newTaskButton)
+		headerHorizontalStackView.addArrangedSubviews([
+
+			headerVerticalStackView,
+			spacer,
+			newTaskButton
+		])
 
 		headerVerticalStackView.addArrangedSubview(headerTitle)
 		headerVerticalStackView.addArrangedSubview(headerSubTitle)
