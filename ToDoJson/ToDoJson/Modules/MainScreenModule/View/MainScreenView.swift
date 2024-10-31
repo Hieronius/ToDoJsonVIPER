@@ -89,8 +89,11 @@ private extension MainScreenView {
 			newTaskButton
 		])
 
-		headerVerticalStackView.addArrangedSubview(headerTitle)
-		headerVerticalStackView.addArrangedSubview(headerSubTitle)
+		headerVerticalStackView.addArrangedSubviews([
+
+			headerTitle,
+			headerSubTitle
+		])
 
 		// MARK: Categories of Tasks
 
