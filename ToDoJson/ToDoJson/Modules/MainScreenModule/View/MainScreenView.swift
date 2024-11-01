@@ -99,8 +99,11 @@ private extension MainScreenView {
 
 		categoriesContainerView.addSubview(categoriesHorizontalStackView)
 
-		categoriesHorizontalStackView.addArrangedSubview(categoryAllSummeryStackView)
-		categoriesHorizontalStackView.addArrangedSubview(pipeSeparatorView)
+		categoriesHorizontalStackView.addArrangedSubviews([
+
+			categoryAllSummeryStackView,
+			pipeSeparatorView
+		])
 
 		categoriesHorizontalStackView.addArrangedSubview(categoryOpenSummeryStackView)
 		categoriesHorizontalStackView.addArrangedSubview(categoryClosedSummeryStackView)
