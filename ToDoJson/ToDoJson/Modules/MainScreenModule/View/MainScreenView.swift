@@ -108,8 +108,11 @@ private extension MainScreenView {
 			categoryClosedSummeryStackView
 		])
 
-		categoryAllSummeryStackView.addArrangedSubview(categoryAllNameLabel)
-		categoryAllSummeryStackView.addArrangedSubview(categoryAllTaskCountLabel)
+		categoryAllSummeryStackView.addArrangedSubviews([
+
+			categoryAllNameLabel,
+			categoryAllTaskCountLabel
+		])
 
 		categoryOpenSummeryStackView.addArrangedSubview(categoryOpenNameLabel)
 		categoryOpenSummeryStackView.addArrangedSubview(categoryOpenTaskCountLabel)
