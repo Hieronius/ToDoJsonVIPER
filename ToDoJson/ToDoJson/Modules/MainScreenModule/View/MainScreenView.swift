@@ -120,8 +120,11 @@ private extension MainScreenView {
 			categoryOpenTaskCountLabel,
 		])
 
-		categoryClosedSummeryStackView.addArrangedSubview(categoryClosedNameLabel)
-		categoryClosedSummeryStackView.addArrangedSubview(categoryClosedTaskCountLabel)
+		categoryClosedSummeryStackView.addArrangedSubviews([
+
+			categoryClosedNameLabel,
+			categoryClosedTaskCountLabel
+		])
 
 		collectionView.register(ToDoCell.self, forCellWithReuseIdentifier: ToDoCell.reuseIdentifier)
 	}
