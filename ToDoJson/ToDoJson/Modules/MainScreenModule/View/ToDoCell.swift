@@ -97,13 +97,16 @@ private extension ToDoCell {
 			topSpacerSeparator
 		])
 
-		verticalStackView.addArrangedSubview(titleLabel)
-		verticalStackView.addArrangedSubview(descriptionLabel)
-		verticalStackView.addArrangedSubview(topSpacer)
-		verticalStackView.addArrangedSubview(dividerView)
-		verticalStackView.addArrangedSubview(bottomSpacer)
+		verticalStackView.addArrangedSubviews([
 
-		verticalStackView.addArrangedSubview(dateStackView)
+			titleLabel,
+			descriptionLabel,
+			topSpacer,
+			dividerView,
+			bottomSpacer,
+
+			dateStackView
+		])
 
 		dateStackView.addArrangedSubview(creationDateLabel)
 		dateStackView.addArrangedSubview(deadlineLabel)
