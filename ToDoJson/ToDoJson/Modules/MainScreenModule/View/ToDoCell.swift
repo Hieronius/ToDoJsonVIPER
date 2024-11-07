@@ -108,9 +108,12 @@ private extension ToDoCell {
 			dateStackView
 		])
 
-		dateStackView.addArrangedSubview(creationDateLabel)
-		dateStackView.addArrangedSubview(deadlineLabel)
-		dateStackView.addArrangedSubview(dateSpacer)
+		dateStackView.addArrangedSubviews([
+
+			creationDateLabel,
+			deadlineLabel,
+			dateSpacer
+		])
 
 		horizontalStackView.addArrangedSubview(verticalStackView)
 		horizontalStackView.addArrangedSubview(checkboxImageView)
