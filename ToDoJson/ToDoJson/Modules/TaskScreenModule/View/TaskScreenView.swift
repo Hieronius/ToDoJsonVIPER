@@ -105,7 +105,8 @@ private extension TaskScreenView {
 		deadlineHorizontalStackView.spacing = 5
 		
 		[taskTitleLabel, taskDescriptionLabel, deadlineLabel].forEach {
-			$0.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+			$0.font = UIFont.systemFont(ofSize: 16
+										, weight: .medium)
 			$0.textColor = .black
 			$0.numberOfLines = 1
 		}
@@ -140,7 +141,6 @@ private extension TaskScreenView {
 		mainVerticalStackView,
 		taskTitleHorizontalStackView,
 		deadlineHorizontalStackView
-
 		])
 		
 		NSLayoutConstraint.activate([
