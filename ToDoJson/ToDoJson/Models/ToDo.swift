@@ -2,9 +2,17 @@ import Foundation
 
 /// Main data stracture to handle data from JSON file
 struct ToDoResponse: Decodable {
+
+	/// An array of tasks from the server
 	let todos: [ToDo]
+
+	/// Amount of the tasks taken from the server
 	let total: Int
+
+	/// Property to define how much tasks should be ignored
 	let skip: Int
+
+	/// Total amount of tasks which can be stored in the server
 	let limit: Int
 }
 
