@@ -40,6 +40,7 @@ extension TaskScreenViewController: TaskScreenViewInput {
 // MARK: - SetupBehaviour
 
 private extension TaskScreenViewController {
+	
 	func setupBehaviour() {
 		rootView.doneButton.addTarget(self, action: #selector(saveTask), for: .touchUpInside)
 	}
@@ -52,6 +53,7 @@ private extension TaskScreenViewController {
 		if let existingTask = task {
 
 			presenter?.updateTask(existingTask, title: title, isCompleted: existingTask.completed, description: description, deadline: deadline, creationDate: Date())
+			
 		} else {
 
 			presenter?.saveTask(title: title, description: description, deadline: deadline, creationDate: Date())
