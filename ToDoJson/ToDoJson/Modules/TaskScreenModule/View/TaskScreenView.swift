@@ -63,14 +63,17 @@ private extension TaskScreenView {
 	
 	func embedViews() {
 		addSubview(mainVerticalStackView)
-		
-		mainVerticalStackView.addArrangedSubview(taskTitleContainerView)
-		mainVerticalStackView.addArrangedSubview(taskDescriptionLabel)
-		mainVerticalStackView.addArrangedSubview(taskDescriptionTextField)
-		mainVerticalStackView.addArrangedSubview(midSpacer)
-		mainVerticalStackView.addArrangedSubview(deadlineContainerView)
-		mainVerticalStackView.addArrangedSubview(doneButton)
-		mainVerticalStackView.addArrangedSubview(bottomSpacer)
+
+		mainVerticalStackView.addArrangedSubviews([
+
+			taskTitleContainerView,
+			taskDescriptionLabel,
+			taskDescriptionTextField,
+			midSpacer,
+			deadlineContainerView,
+			doneButton,
+			bottomSpacer
+		])
 		
 		taskTitleContainerView.addSubview(taskTitleHorizontalStackView)
 		taskTitleHorizontalStackView.addArrangedSubview(taskTitleVerticalStackView)
