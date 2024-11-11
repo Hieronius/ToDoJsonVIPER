@@ -77,9 +77,12 @@ private extension TaskScreenView {
 		
 		taskTitleContainerView.addSubview(taskTitleHorizontalStackView)
 		taskTitleHorizontalStackView.addArrangedSubview(taskTitleVerticalStackView)
-		
-		taskTitleVerticalStackView.addArrangedSubview(taskTitleLabel)
-		taskTitleVerticalStackView.addArrangedSubview(taskTitleTextField)
+
+		taskTitleVerticalStackView.addArrangedSubviews([
+
+			taskTitleLabel,
+			taskTitleTextField
+		])
 		
 		deadlineContainerView.addSubview(deadlineHorizontalStackView)
 		deadlineHorizontalStackView.addArrangedSubview(deadlineLabel)
