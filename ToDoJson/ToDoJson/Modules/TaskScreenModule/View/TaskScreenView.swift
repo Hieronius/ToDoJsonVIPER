@@ -85,8 +85,12 @@ private extension TaskScreenView {
 		])
 		
 		deadlineContainerView.addSubview(deadlineHorizontalStackView)
-		deadlineHorizontalStackView.addArrangedSubview(deadlineLabel)
-		deadlineHorizontalStackView.addArrangedSubview(deadlineDatePicker)
+
+		deadlineHorizontalStackView.addArrangedSubviews([
+
+			deadlineLabel,
+			deadlineDatePicker
+		])
 	}
 
 }
